@@ -2022,8 +2022,9 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 
   @keyframes puntosAnim {
     0% { content: ''; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
-    100% { content: ''; }
+    20% { content: '.'; }
+    40% { content: '..'; }
+    60% { content: '...'; }
+    80% { content: '....'; }
+    100% { content: '.....'; }
   }
