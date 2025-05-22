@@ -1901,3 +1901,63 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 .vivid-yellow-bg{
 	background: #fdcb03;
 }
+
+.banner-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .contenido {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+  }
+  
+  .transparente_logo {
+    background-color: rgba(2, 2, 2, 0.5);
+    padding: 10px;
+    border-radius: 100px;
+  }
+
+  .transparente {
+    background-color: rgba(2, 2, 2, 0.5);
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  .transparente-texto {
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  }
+
+  .transparente-inline {
+    background-color: rgba(2, 2, 2, 0.5);
+    display: inline;
+    line-height: 0;
+    font-size: 25px; /* o el tamaño que necesites */
+    vertical-align: middle;
+    color: whites;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  }
