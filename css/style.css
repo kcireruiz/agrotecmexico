@@ -1953,7 +1953,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     font-size: 25px; /* o el tamaño que necesites */
     vertical-align: middle;
     color: whites;
-    padding: 10px;
+    padding: 0px;
     border-radius: 10px;
     text-shadow: 
     -1px -1px 0 black,
@@ -1979,4 +1979,48 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     background-size: contain;
     z-index: -1;
     opacity: 0.6; /* hace que se vea como sombra */
+  }
+
+  .titulo {
+    color: #14c414; /* verde */
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+      bottom: 50px;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+  }
+
+  .cargando {
+    color: rgba(208, 208, 4, 0.617);
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .puntos::after {
+    content: '';
+    display: inline-block;
+    animation: puntosAnim 1.5s infinite steps(4);
+    width: 1ch;
+    text-align: left;
+  }
+
+  @keyframes puntosAnim {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+    100% { content: ''; }
   }
