@@ -204,25 +204,29 @@
 		
 		jQuery(".orange-bg").on('click',function(){
 			jQuery(".logo-header img").attr("src", "images/agro_recolored.png");
-			jQuery(".footer-logo .text-center img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_agro img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_hijos img").attr("src", "images/hijoscampo.png");
 			return false;
 		});
 
 		jQuery(".strong-blue-bg").on('click',function(){
 			jQuery(".logo-header img").attr("src", "images/agro_recolored.png");
-			jQuery(".footer-logo .text-center img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_agro img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_hijos img").attr("src", "images/hijoscampo.png");
 			return false;
 		});
 
 		jQuery(".moderate-green-bg").on('click',function(){
 			jQuery(".logo-header img").attr("src", "images/agro.png");
-			jQuery(".footer-logo .text-center img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_agro img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_hijos img").attr("src", "images/hijoscampo.png");
 			return false;
 		});
 
 		jQuery(".vivid-yellow-bg").on('click',function(){
 			jQuery(".logo-header img").attr("src", "images/agro.png");
-			jQuery(".footer-logo .text-center img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_agro img").attr("src", "images/agro_white.png");
+			jQuery(".footer-logo .text-center .logo_hijos img").attr("src", "images/hijoscampo.png");
 			return false;
 		});
 
