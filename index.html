@@ -29,8 +29,6 @@
     <!-- color -->
     <link id="changeable-colors" rel="stylesheet" href="css/colors/moderate-green.css" />
 
-    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
-
     <!-- Modernizer -->
     <script src="js/modernizer.js"></script>
 
@@ -63,7 +61,7 @@
                                 </button>
                                 <div class="logo logo-envuelto" >
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="#" >
-                                        <img src="images/agro.png" alt="" height="60px" width="120px"/>
+                                        <img style="margin-top: -14px;" src="images/agro.png" alt="" height="80px" width="140px"/>
                                     </a>
                                 </div>
                             </div>
@@ -77,7 +75,7 @@
                                         <li><a href="#gallery">Gallery</a></li>
                                         <li><a href="#blog">Blog</a></li>
                                         <li><a href="#pricing">pricing</a></li>
-                                        <li><a href="#reservation">Reservaion</a></li>
+                                        <!--  <li><a href="#reservation">Reservaion</a></li>-->
                                         <li><a href="#footer">Contacto</a></li>
                                     </ul>
                                 </span>
@@ -123,9 +121,11 @@
     <!-- </div> -->
     <section id="banner" class="banner-video full-screen-mode parallax">
         <video autoplay muted loop playsinline class="background-video">
-          <source src="images/video-banner2.mp4" type="video/mp4">
+          <source src="images/video_banner.mp4" type="video/mp4">
           Tu navegador no soporta video HTML5.
         </video>
+        <!-- Capa oscura -->
+        <div class="video-overlay"></div>
         <div class="contenido">
           <!-- Aquí va tu contenido encima del video -->
           <div class="container pr">
@@ -191,8 +191,10 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title color-white text-center"> Novedades </h2>
-                        <h5 class="title-caption text-center"> ¡Siempre hay algo nuevo en Agrotec México! Explora nuestros lanzamientos más recientes y no te pierdas ninguna oportunidad de aprender y crecer en el campo. </h5>
+                        <h2 class="block-title color-white text-center"> Reseñas </h2>
+                        <!--<h5 class="title-caption text-center"> ¡Siempre hay algo nuevo en Agrotec México! Explora nuestros lanzamientos más recientes y no te pierdas ninguna oportunidad de aprender y crecer en el campo. </h5>-->
+                        <h5 class="title-caption text-center"> En Agrotec-Mexico, cada curso cuenta una historia, y cada cliente es parte de ella. Nos enorgullece compartir las experiencias de quienes han confiado en nosotros: </h5>
+                        
                     </div>
                     <div class="special-box">
                         <div id="owl-demo">
@@ -974,7 +976,7 @@
     </div>
     <!-- end pricing-main -->
 
-    <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
+     <!--<div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
         <div class="container">
             <div class="row">
                 <div class="form-reservations-box">
@@ -993,19 +995,19 @@
                                     <input type="text" name="form_name" id="form_name" placeholder="Name" required="required" data-error="Firstname is required.">
                                 </div>
                             </div>
-                            <!-- end col -->
+                           
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <input type="email" name="email" id="email" placeholder="E-Mail ID" required="required" data-error="E-mail id is required.">
                                 </div>
                             </div>
-                            <!-- end col -->
+                           
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <input type="text" name="phone" id="phone" placeholder="contact no.">
                                 </div>
                             </div>
-                            <!-- end col -->
+                           
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <select name="no_of_persons" id="no_of_persons" class="selectpicker">
@@ -1016,19 +1018,19 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- end col -->
+                       
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <input type="text" name="date-picker" id="date-picker" placeholder="Date" required="required" data-error="Date is required." />
                                 </div>
                             </div>
-                            <!-- end col -->
+                       
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <input type="text" name="time-picker" id="time-picker" placeholder="Time" required="required" data-error="Time is required." />
                                 </div>
                             </div>
-                            <!-- end col -->
+                          
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <select name="preferred_food" id="preferred_food" class="selectpicker">
@@ -1039,7 +1041,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- end col -->
+                         
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <select name="occasion" id="occasion" class="selectpicker">
@@ -1050,25 +1052,25 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- end col -->
+                            
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="reserve-book-btn text-center">
                                     <button class="hvr-underline-from-center" type="submit" value="SEND" id="submit">BOOK MY TABLE </button>
                                 </div>
                             </div>
-                            <!-- end col -->
+                        
                         </form>
-                        <!-- end form -->
+                     
                     </div>
-                    <!-- end col -->
+                    
                 </div>
-                <!-- end reservations-box -->
+            
             </div>
-            <!-- end row -->
+       
         </div>
-        <!-- end container -->
-    </div>
+       
+    </div> -->
     <!-- end reservations-main -->
 
     <div id="footer" class="footer-main">
