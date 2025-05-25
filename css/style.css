@@ -2040,3 +2040,28 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     filter: blur(5px); /* Aplica el difuminado */
     transform: scale(1.1); /* Escala un poco para que el borde difuminado no se vea cortado */
   }
+  .stat-box {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  .stat-box i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .counter {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .stat-box p {
+    margin-top: 10px;
+    font-size: 16px;
+  }

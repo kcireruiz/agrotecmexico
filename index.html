@@ -31,6 +31,7 @@
 
     <!-- Modernizer -->
     <script src="js/modernizer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,7 +39,32 @@
     <![endif]-->
 
 </head>
-
+<script>
+    $(document).ready(function () {
+      var counted = false;
+      $(window).scroll(function () {
+        var oTop = $('.counter').first().offset().top - window.innerHeight;
+        if (!counted && $(window).scrollTop() > oTop) {
+          $('.counter').each(function () {
+            var $this = $(this);
+            $({ countNum: $this.text() }).animate({
+              countNum: $this.data('count')
+            }, {
+              duration: 2000,
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum);
+              }
+            });
+          });
+          counted = true;
+        }
+      });
+    });
+  </script>
 <body>
     <div id="loader">
         <div class="titulo">Agrotec sembrando el conocimiento</div>
@@ -72,9 +98,9 @@
                                         <li><a href="#about">Quiénes somos</a></li>
                                         <li><a href="#menu">Cursos</a></li>
                                         <li><a href="#our_team">Team</a></li>
-                                        <li><a href="#gallery">Gallery</a></li>
+                                        <li><a href="#gallery">NOVEDADES</a></li>
                                         <li><a href="#blog">Webinar</a></li>
-                                        <li><a href="#pricing">pricing</a></li>
+                                        <li><a href="#pricing">Datos</a></li>
                                         <!--  <li><a href="#reservation">Reservaion</a></li>-->
                                         <li><a href="#footer">Contacto</a></li>
                                     </ul>
@@ -139,7 +165,7 @@
                             </div>
                             <p><span class="transparente-inline">-Capacitaciónes   -Cursos   -Asesorías</span></p>
                             <div class="book-btn">
-                                <a href="#reservation" class="table-btn hvr-underline-from-center">Nuestros Cursos</a>
+                                <a href="#menu" class="table-btn hvr-underline-from-center">Nuestros Cursos</a>
                             </div>
                             <a href="#about">
                                 <div class="mouse"></div>
@@ -488,7 +514,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title text-center">
-						Nuesto Team 	
+						Nuestros Profesores 	
 					</h2>
                         <p class="title-caption text-center">Conoce a nuestro equipo de expertos: profesionales apasionados por la agricultura que comparten su conocimiento a través de cursos prácticos, actualizados y con impacto real en el campo. </p>
                     </div>
@@ -562,7 +588,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title text-center">
-						Our Gallery	
+						Novedades	
 					</h2>
                         <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available </p>
                     </div>
@@ -789,22 +815,26 @@
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-block">
-                                    <div class="blog-img-box">
-                                        <img src="images/featured-image-01.jpg" alt="" />
-                                        <div class="overlay">
-                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nc9VzhaDOE0" title="&quot;Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                         </div>
-                                    </div>
-                                    <div class="blog-dit">
-                                        <p><span>25 NOVEMBER, 2014</span></p>
-                                        <h2>LATEST RECIPES JUST IN!</h2>
-                                        <h5>BY John Doggett</h5>
-                                    </div>
+                                        <h5 style="color: black; padding: 5px;">"Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas"</h5>
                                 </div>
                             </div>
                             <!-- end col -->
                         </div>
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-block">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0cDyFFjpcfo" title="🎥 Inductores de Resistencia en Plantas | Protección Natural contra Plagas y Enfermedades 🌿🛡️" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                        <h5 style="color: black; padding: 5px;">🎥 Inductores de Resistencia en Plantas | Protección Natural contra Plagas y Enfermedades 🌿🛡️</h5>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!--<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-block">
                                     <div class="blog-img-box">
@@ -820,8 +850,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end col -->
-                        </div>
+                        </div>-->
                         </div>
                     </div>
                     <!-- end blog-box -->
@@ -844,13 +873,50 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2 class="block-title text-center">
-						Pricing 	
+						Nuestros Logros 	
 					</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci varius, elementum lectus nec, aliquam lectus. Duis neque augue, maximus in sapien ut, porta pharetra odio.</p>
+                    <p>"Sembramos conocimiento, cosechamos futuro: cada curso transforma vidas en el campo."</p>
                 </div>
                 <div class="panel-pricing-in">
-                    <!-- item -->
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="container text-center" style="margin-top: 50px;">
+                        
+                        <div class="row text-center" style="margin-top: 40px;">
+    
+                            <div class="col-xs-6 col-sm-3">
+                              <div class="stat-box">
+                                <i class="fa fa-graduation-cap text-success"></i>
+                                <span class="counter" data-count="328">0</span>
+                                <p>Cursos vendidos</p>
+                              </div>
+                            </div>
+                            
+                            <div class="col-xs-6 col-sm-3">
+                              <div class="stat-box">
+                                <i class="fa fa-users text-primary"></i>
+                                <span class="counter" data-count="274">0</span>
+                                <p>Productores capacitados</p>
+                              </div>
+                            </div>
+                            
+                            <div class="col-xs-6 col-sm-3">
+                              <div class="stat-box">
+                                <i class="fa fa-leaf text-success"></i>
+                                <span class="counter" data-count="4120">0</span>
+                                <p>Plántulas sembradas</p>
+                              </div>
+                            </div>
+                            
+                            <div class="col-xs-6 col-sm-3">
+                              <div class="stat-box">
+                                <i class="fa fa-tree text-warning"></i>
+                                <span class="counter" data-count="1090">0</span>
+                                <p>Árboles cultivados</p>
+                              </div>
+                            </div>
+                            
+                          </div>
+                      </div>
+                     <!-- <div class="col-md-4 col-sm-4 text-center">
                         <div class="panel panel-pricing">
                             <div class="panel-heading">
                                 <div class="pric-icon">
@@ -874,9 +940,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /item -->
-
-                    <!-- item -->
+                    
                     <div class="col-md-4 col-sm-4 text-center">
                         <div class="panel panel-pricing">
                             <div class="panel-heading">
@@ -901,9 +965,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /item -->
-
-                    <!-- item -->
+                    
                     <div class="col-md-4 col-sm-4 text-center">
                         <div class="panel panel-pricing">
                             <div class="panel-heading">
@@ -927,7 +989,7 @@
                                 <a class="btn btn-lg btn-block hvr-underline-from-center" href="#">Purchase Now!</a>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- /item -->
                 </div>
             </div>
