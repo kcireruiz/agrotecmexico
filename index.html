@@ -150,11 +150,8 @@
         <!-- end container -->
     <!-- </div> -->
     <section id="banner" class="banner-video full-screen-mode parallax">
-        <video autoplay muted loop playsinline poster="images/banner.jpg" class="background-video d-none d-md-block">
-          <source src="images/video_banner.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-        <img src="images/banner.jpg" class="background-image d-block d-md-none" alt="Banner móvil">
+        <div id="banner-container"></div>
+       <!--  <img src="images/banner.jpg" class="background-image d-block d-md-none" alt="Banner móvil">-->
         <!-- Capa oscura -->
         <div class="video-overlay"></div>
         <div class="contenido">
@@ -1179,10 +1176,26 @@
 
     <!-- ALL JS FILES -->
      <script src="js/modernizer.min.js" defer></script>
-    <script src="js/all.js" defer></script>
+    <script src="js/all.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js" defer></script>
 </body>
+<script>
+  if (window.innerWidth >= 768) {
+    const banner = document.getElementById('banner-container');
+    banner.innerHTML = `
+      <video autoplay muted loop playsinline poster="images/banner-01.jpg" class="background-video">
+        <source src="images/video_banner.mp4" type="video/mp4">
+      </video>
+    `;
+  } else {
+    const banner = document.getElementById('banner-container');
+    banner.innerHTML = `
+      <img src="images/banner-01.jpg" alt="Banner móvil" loading="eager" fetchpriority="high" class="background-imge">
+    `;
+  }
+</script>
+
 
 </html>
