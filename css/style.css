@@ -2081,3 +2081,49 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
   .oculto{
     display: none;
   }
+
+
+
+
+  .social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .btn-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-whatsapp {
+    background-color: #25D366;
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #1ebe5a;
+  }
+
+  .btn-facebook {
+    background-color: #1877F2;
+  }
+
+  .btn-facebook:hover {
+    background-color: #155fcf;
+  }
+
+  .svg-redes-sociales svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }

@@ -152,7 +152,7 @@
 
 @media (min-width: 768px) {
 .gal-container .modal-dialog {
-    width: 55%;
+    width: 45%;
     margin: 50 auto;
 	}
 .banner-cell .mouse:after {
