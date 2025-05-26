@@ -2065,3 +2065,19 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     margin-top: 10px;
     font-size: 16px;
   }
+
+  svg{
+    width: 64px;
+    height: 64px;
+    fill: black; 
+    cursor: pointer;
+    transition: fill 0.3s ease;
+  }
+
+  svg.selected {
+    fill: #FFF;
+  }
+
+  .oculto{
+    display: none;
+  }

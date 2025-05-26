@@ -38,8 +38,12 @@
 		$(window).on('scroll', function () {
 			if ($(window).scrollTop() > 50) {
 				$('.header-block-top').addClass('fixed-menu');
+				$('.nav').removeClass('transparente');
+				$('.logo').removeClass('logo-envuelto');
 			} else {
 				$('.header-block-top').removeClass('fixed-menu');
+				$('.nav').addClass('transparente');
+				$('.logo').addClass('logo-envuelto');
 			}
 		});
 		
@@ -67,7 +71,36 @@
 		 
 		  });
 		});
+
+		$(document).ready(function() {
+			$("#owl-demo2").owlCarousel({
+				autoPlay: 3000, //Set AutoPlay to 3 seconds
+				items : 3,
+				itemsDesktop : [1199,3],
+				itemsDesktopSmall : [979,2]
+		   
+			});
+		  });
 		
+		  $(document).ready(function() {
+			$("#owl-demo3").owlCarousel({
+				autoPlay: 3000, //Set AutoPlay to 3 seconds
+				items : 3,
+				itemsDesktop : [1199,3],
+				itemsDesktopSmall : [979,2]
+		   
+			});
+		  });
+
+		  $(document).ready(function() {
+			$("#owl-demo4").owlCarousel({
+				autoPlay: 3000, //Set AutoPlay to 3 seconds
+				items : 3,
+				itemsDesktop : [1199,3],
+				itemsDesktopSmall : [979,2]
+		   
+			});
+		  });
 		/* ========================
 			SLIDER - TAB 
 		=============================*/
