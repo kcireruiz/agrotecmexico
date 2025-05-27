@@ -244,7 +244,7 @@ html, body{ height: 100%; }
 	opacity:0.3;
 	position:fixed;
 	bottom:20px;
-	right:40px;
+	left:40px;
 	display:none;			
 	background:url(../images/icon_top.png) no-repeat;
 }
@@ -1970,15 +1970,15 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
   .logo-envuelto::after {
     content: "";
     position: absolute;
-    bottom: -80px;
-    left: 80%;
+    bottom: -90px;
+    left: 70%;
     transform: translateX(-50%) rotate(40deg);
     width: 250px;
     height: 350px;
     background: url('../images/hoja.png') no-repeat center bottom;
     background-size: contain;
     z-index: -1;
-    opacity: 0.6; /* hace que se vea como sombra */
+    opacity: 0.8; /* hace que se vea como sombra */
   }
 
   .titulo {
@@ -2040,19 +2040,6 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     filter: blur(5px); /* Aplica el difuminado */
     transform: scale(1.1); /* Escala un poco para que el borde difuminado no se vea cortado */
   }
-
-  .background-imge {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    filter: blur(2px); /* Aplica el difuminado */
-    transform: scale(1.1); /* Escala un poco para que el borde difuminado no se vea cortado */
-  }
-
   .stat-box {
     padding: 20px;
     border-radius: 10px;
