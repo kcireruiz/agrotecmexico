@@ -2132,3 +2132,13 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     height: 20px;
     fill: white;
   }
+
+  .g-logo{
+    height:100px; 
+    width:200px;
+  }
+
+  .c-logo{
+    height:60px; 
+    width:120px;
+  }
