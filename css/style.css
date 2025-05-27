@@ -933,6 +933,11 @@ html, body{ height: 100%; }
 	color:#fff;
 }
 
+.sf-team-reverse{
+    display: flex;
+  flex-direction: column-reverse;
+}
+
 .sf-team{
 	float: left;
     width: 100%;
@@ -1970,11 +1975,11 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
   .logo-envuelto::after {
     content: "";
     position: absolute;
-    bottom: -90px;
-    left: 70%;
+    bottom: -65px;
+    left: 45%;
     transform: translateX(-50%) rotate(40deg);
-    width: 300px;
-    height: 400px;
+    width: 4000px;
+    height: 500px;
     background: url('../images/hoja.png') no-repeat center bottom;
     background-size: contain;
     z-index: -1;
