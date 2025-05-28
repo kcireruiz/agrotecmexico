@@ -1932,14 +1932,14 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
   }
   
   .transparente_logo {
-    background-color: rgba(2, 2, 2, 0.5);
+    background-color: rgba(2, 2, 2, 0.8);
     display: inline;
     line-height: 0;
     border-radius: 10px;
   }
 
   .transparente {
-    background-color: rgba(2, 2, 2, 0.5);
+    background-color: rgba(2, 2, 2, 0.8);
     border-radius: 10px;
   }
 
