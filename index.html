@@ -70,6 +70,23 @@
         btn.textContent = container.classList.contains('expanded') ? '↑ Ver menos' : '↓ Ver más';
     }
 
+    const video = document.querySelector("video");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const src = video.getAttribute("data-src");
+            if (src) {
+            video.src = src;
+            video.load();
+            }
+            obs.unobserve(video);
+        }
+        });
+    });
+
+    observer.observe(video);
+
   </script>
 <body>
     <div id="loader">
