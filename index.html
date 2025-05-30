@@ -141,8 +141,17 @@
                                 </button>
                                 <div class="logo logo-envuelto">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="#">
-                                        <img loading="lazy" style="margin-top: -14px;" src="images/agrologo.webp" alt=""
-                                            class="dimension g-logo" loading="eager" decoding="async" />
+                                        <picture>
+                                        <!-- Logo para pantallas pequeñas (móvil) -->
+                                        <source srcset="images/agrologo.webp" media="(max-width: 768px)">
+                                        
+                                        <!-- Logo para pantallas grandes (PC) -->
+                                        <img src="images/agro-logo.webp" alt="Logo Agroempresa"
+                                            style="margin-top: -14px;"
+                                            class="g-logo"
+                                            loading="eager"
+                                            decoding="async">
+                                        </picture>
                                     </a>
                                 </div>
                             </div>

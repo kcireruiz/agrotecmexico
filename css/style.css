@@ -1985,6 +1985,33 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     opacity: 0.8; /* hace que se vea como sombra */
   }
 
+  /* Estilos para móviles */
+    @media (max-width: 768px) {
+    .logo-envuelto::after {
+            content: "";
+            position: absolute;
+            bottom: -45px;
+            left: 70%;
+            transform: translateX(-50%) rotate(40deg);
+            width: 300px;
+            height: 400px;
+            background: url('../images/hoja.png') no-repeat center bottom;
+            background-size: contain;
+            z-index: -1;
+            opacity: 0.8; /* hace que se vea como sombra */
+        }
+    }
+
+    .g-logo{
+        height:100px; 
+        width:200px;
+    }
+    @media (max-width: 768px) {
+    .g-logo{
+        height:60px; 
+        width:120px;
+    }
+
   .titulo {
     color: hsl(120, 78%, 30%); /* verde */
     font-size: 2em;
@@ -2132,16 +2159,12 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     fill: white;
   }
 
-  .g-logo{
-    height:100px; 
-    width:200px;
-  }
+  
 
   .c-logo{
     height:60px; 
     width:120px;
   }
-
 
   .youtube-placeholder {
   position: relative;
