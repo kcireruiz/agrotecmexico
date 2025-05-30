@@ -2142,3 +2142,29 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     height:60px; 
     width:120px;
   }
+
+
+  .youtube-placeholder {
+  position: relative;
+  width: 100%;
+  height: 387px;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  cursor: pointer;
+  border-bottom: 2px solid #000;
+}
+
+.youtube-placeholder .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  background: url('https://img.icons8.com/?size=100&id=13076&format=png&color=fa0000') no-repeat center center;
+  background-size: 60px 60px;
+  opacity: 0.8;
+}

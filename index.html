@@ -74,6 +74,31 @@
 
     const video = document.querySelector("video");
 
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const placeholders = document.querySelectorAll(".youtube-placeholder");
+
+        placeholders.forEach(el => {
+            const videoId = el.dataset.id;
+            el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+
+            el.addEventListener("click", () => {
+                const iframe = document.createElement("iframe");
+                iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+                iframe.setAttribute("frameborder", "0");
+                iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                iframe.setAttribute("allowfullscreen", "");
+                iframe.setAttribute("loading", "lazy");
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                el.innerHTML = "";
+                el.appendChild(iframe);
+            });
+        });
+    });
+
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -88,7 +113,6 @@
     });
 
     observer.observe(video);
-
 </script>
 
 <body>
@@ -302,7 +326,7 @@
                                                 </a>
                                             </div>
                                             <div class="box">
-                                                <a href="#" data-toggle="modal" data-target="#1">
+                                                <a href="#" data-toggle="modal" data-target="#0">
                                                     <h2 class="media-body media-heading text-center">Nuevo Curso</h2>
                                                     <video data-src="video.mp4" preload="none" width="100%" autoplay
                                                         muted loop playsinline poster="images/banner-generico.png"
@@ -319,27 +343,26 @@
                             </div>
                             <div class="panel panel-default"
                                 style="max-width: 500px; min-height: 520px; margin: 20px auto; margin-right: 10px; margin-left: 10px;">
-                                 <div class="panel-body">
-                                <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                                    <div class="blog-block" >
-                                        <h2 class="media-body media-heading text-center">Nuevo Webinar</h2>
-                                        <div class="embed-responsive embed-responsive-16by9" style="padding-top: 212px;">
-                                            <iframe loading="lazy" class="embed-responsive-item" style="border-bottom: 2px solid #000; padding-bottom: 5px;"
-                                                src="https://www.youtube.com/embed/nc9VzhaDOE0"
-                                                title="&quot;Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas&quot;"
-                                                frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="panel-body">
+                                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                                        <div class="blog-block">
+                                            <h2 class="media-body media-heading text-center">Nuevo Webinar</h2>
+
+                                            <!-- FACHADA PERSONALIZADA DE VIDEO -->
+                                            <div class="youtube-placeholder" data-id="nc9VzhaDOE0" style="margin-bottom: 10px;">
+                                                <div class="play-button"></div>
+                                            </div>
+
+                                            <h5 class="text-center" style="color: black; padding: 5px;">
+                                                "Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas"
+                                            </h5>
                                         </div>
-                                        <h5 style="color: black; padding: 5px;">"Introducción al Cultivo de Pitahaya:
-                                            Recomendaciones y Buenas Prácticas"</h5>
                                     </div>
                                 </div>
-                            <!-- end col -->
                             </div>
-                            </div>
-                            
-                            <div class="panel panel-default" style="max-width: 500px; margin: 20px auto; margin-right: 10px; margin-left: 10px;">
+
+                            <div class="panel panel-default"
+                                style="max-width: 500px; margin: 20px auto; margin-right: 10px; margin-left: 10px;">
                                 <div class="panel-body">
                                     <div class="media">
                                         <div class="sf-team sf-team-reverse" style="min-height: 420px;">
@@ -376,7 +399,7 @@
                                                 </a>
                                             </div>
                                             <div class="box">
-                                                <a href="#" data-toggle="modal" data-target="#1">
+                                                <a href="#" data-toggle="modal" data-target="#0">
                                                     <h2 class="media-body media-heading text-center">Nuevo Curso</h2>
                                                     <video data-src="video.mp4" preload="none" width="100%" autoplay
                                                         muted loop playsinline poster="images/banner-generico.png"
@@ -392,26 +415,25 @@
                             </div>
                             <div class="panel panel-default"
                                 style="max-width: 500px; min-height: 520px; margin: 20px auto; margin-right: 10px; margin-left: 10px;">
-                                 <div class="panel-body">
-                                <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                                    <div class="blog-block" >
-                                        <h2 class="media-body media-heading text-center">Nuevo Webinar</h2>
-                                        <div class="embed-responsive embed-responsive-16by9" style="padding-top: 212px;">
-                                            <iframe loading="lazy" class="embed-responsive-item" style="border-bottom: 2px solid #000; padding-bottom: 5px;"
-                                            src="https://www.youtube.com/embed/nc9VzhaDOE0"
-                                            title="&quot;Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas&quot;"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    </div>
-                                    <h5 style="color: black; padding: 5px;">"Introducción al Cultivo de Pitahaya:
-                                        Recomendaciones y Buenas Prácticas"</h5>
+                                <div class="panel-body">
+                                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                                        <div class="blog-block">
+                                            <h2 class="media-body media-heading text-center">Nuevo Webinar</h2>
+
+                                            <!-- FACHADA PERSONALIZADA DE VIDEO -->
+                                            <div class="youtube-placeholder" data-id="0cDyFFjpcfo" style="margin-bottom: 10px;">
+                                                <div class="play-button"></div>
+                                            </div>
+
+                                            <h5 class="text-center" style="color: black; padding: 5px;">
+                                                Inductores de Resistencia en Plantas | Protección Natural contra Plagas y Enfermedades
+                                            </h5>
+                                        </div>
                                     </div>
                                 </div>
-                            <!-- end col -->
                             </div>
-                            </div>
-                            <div class="panel panel-default" style="max-width: 500px; margin: 20px auto; margin-right: 10px; margin-left: 10px;">
+                            <div class="panel panel-default"
+                                style="max-width: 500px; margin: 20px auto; margin-right: 10px; margin-left: 10px;">
                                 <div class="panel-body">
                                     <div class="media">
                                         <div class="sf-team sf-team-reverse" style="min-height: 420px;">
@@ -448,7 +470,7 @@
                                                 </a>
                                             </div>
                                             <div class="box">
-                                                <a href="#" data-toggle="modal" data-target="#1">
+                                                <a href="#" data-toggle="modal" data-target="#0">
                                                     <h2 class="media-body media-heading text-center">Nuevo Curso</h2>
                                                     <video data-src="video.mp4" preload="none" width="100%" autoplay
                                                         muted loop playsinline poster="images/banner-generico.png"
@@ -473,7 +495,6 @@
         <!-- end container -->
     </div>
     <!-- end special-menu -->
-
     <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
         <div class="container">
             <div class="row">
