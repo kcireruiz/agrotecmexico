@@ -209,30 +209,6 @@ html, body{ height: 100%; }
 	margin-left: -10px;
 } 
 
-#loader  {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: #fefefe;
-     z-index: 9999;
-    height: 100%;
- }
-
-#status  {
-     width: 200px;
-     height: 200px;
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     background-image: url(../images/loader-animation.gif);
-     background-repeat: no-repeat;
-     background-position: center;
-     margin: -100px 0 0 -100px;
- }
-
-
 /*------------------------------------------------------------------
    	Scrollup
 -------------------------------------------------------------------*/
@@ -1968,23 +1944,6 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 
   
 
-  .titulo {
-    color: hsl(120, 78%, 30%); /* verde */
-    font-size: 2em;
-    font-family: cursive;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-      bottom: 100px;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-
   .cargando {
     color: rgba(45, 255, 3, 0.617);
     font-size: 1.5em;
@@ -1999,22 +1958,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .puntos::after {
-    content: '';
-    display: inline-block;
-    animation: puntosAnim 1.5s infinite steps(4);
-    width: 1ch;
-    text-align: left;
-  }
 
-  @keyframes puntosAnim {
-    0% { content: ''; }
-    20% { content: '.'; }
-    40% { content: '..'; }
-    60% { content: '...'; }
-    80% { content: '....'; }
-    100% { content: '.....'; }
-  }
 
   .background-video {
     width: 100%;

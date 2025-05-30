@@ -46,6 +46,13 @@
 </head>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const loader = document.getElementById("loader");
+        if (loader) {
+        loader.style.display = "none";
+        }
+    });
+
     $(document).ready(function () {
         var counted = false;
         $(window).scroll(function () {
@@ -133,6 +140,53 @@
     observer.observe(video);
 </script>
 <style>
+    #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #status {
+    width: 100px;
+    height: 100px;
+    background-image: url('images/loader-animation.gif'); /* asegúrate que esta ruta esté bien */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+
+  .titulo {
+    color: hsl(120, 78%, 30%);
+    font-size: 1.5em;
+    font-family: cursive;
+    text-align: center;
+  }
+
+  .puntos::after {
+    content: '';
+    display: inline-block;
+    animation: puntosAnim 1.5s infinite steps(4);
+    width: 1ch;
+    text-align: left;
+  }
+
+  @keyframes puntosAnim {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+    100% { content: ''; }
+  }
+
         .logo-envuelto {
             position: relative;
             display: inline-block;
