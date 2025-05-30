@@ -42,14 +42,14 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
 </head>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const loader = document.getElementById("loader");
         if (loader) {
-        loader.style.display = "none";
+            loader.style.display = "none";
         }
     });
 
@@ -141,106 +141,147 @@
 </script>
 <style>
     #loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-  #status {
-    width: 100px;
-    height: 100px;
-    background-image: url('images/loader-animation.gif'); /* asegúrate que esta ruta esté bien */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-bottom: 20px;
-  }
+    #status {
+        width: 100px;
+        height: 100px;
+        background-image: url('images/loader-animation.gif');
+        /* asegúrate que esta ruta esté bien */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-bottom: 20px;
+    }
 
-  .titulo {
-    color: hsl(120, 78%, 30%);
-    font-size: 1.5em;
-    font-family: cursive;
-    text-align: center;
-  }
+    .titulo {
+        color: hsl(120, 78%, 30%);
+        font-size: 1.5em;
+        font-family: cursive;
+        text-align: center;
+    }
 
-  .puntos::after {
-    content: '';
-    display: inline-block;
-    animation: puntosAnim 1.5s infinite steps(4);
-    width: 1ch;
-    text-align: left;
-  }
+    .puntos::after {
+        content: '';
+        display: inline-block;
+        animation: puntosAnim 1.5s infinite steps(4);
+        width: 1ch;
+        text-align: left;
+    }
 
-  @keyframes puntosAnim {
-    0% { content: ''; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
-    100% { content: ''; }
-  }
-
-        .logo-envuelto {
-            position: relative;
-            display: inline-block;
+    @keyframes puntosAnim {
+        0% {
+            content: '';
         }
 
+        25% {
+            content: '.';
+        }
+
+        50% {
+            content: '..';
+        }
+
+        75% {
+            content: '...';
+        }
+
+        100% {
+            content: '';
+        }
+    }
+
+    .logo-envuelto {
+        position: relative;
+        display: inline-block;
+    }
+
+    .logo-envuelto::after {
+        content: "";
+        position: absolute;
+        bottom: -75px;
+        left: 60%;
+        transform: translateX(-50%) rotate(40deg);
+        width: 500px;
+        height: 600px;
+        background: url('images/hoja.png') no-repeat center bottom;
+        background-size: contain;
+        z-index: -1;
+        opacity: 0.8;
+        /* hace que se vea como sombra */
+    }
+
+    /* Estilos para móviles */
+    @media (max-width: 768px) {
         .logo-envuelto::after {
             content: "";
             position: absolute;
-            bottom: -75px;
-            left: 60%;
+            bottom: -52px;
+            left: 50%;
             transform: translateX(-50%) rotate(40deg);
-            width: 500px;
-            height: 600px;
-            background: url('images/hoja.png') no-repeat center bottom;
-            background-size: contain;
+            width: 150px;
+            height: 200px;
+            background-image: none;
             z-index: -1;
             opacity: 0.8;
             /* hace que se vea como sombra */
         }
+    }
 
-        /* Estilos para móviles */
-        @media (max-width: 768px) {
-            .logo-envuelto::after {
-                content: "";
-                position: absolute;
-                bottom: -52px;
-                left: 50%;
-                transform: translateX(-50%) rotate(40deg);
-                width: 150px;
-                height: 200px;
-                background-image: none;
-                z-index: -1;
-                opacity: 0.8;
-                /* hace que se vea como sombra */
-            }
-        }
+    .g-logo {
+        height: 100px;
+        width: 200px;
+    }
 
+    @media (max-width: 768px) {
         .g-logo {
-            height: 100px;
-            width: 200px;
-        }
-
-        @media (max-width: 768px) {
-            .g-logo {
-                height: 60px;
-                width: 120px;
-            }
-        }
-
-        .c-logo {
             height: 60px;
             width: 120px;
         }
-    </style>
+    }
+
+    .c-logo {
+        height: 60px;
+        width: 120px;
+    }
+
+    .typer,
+    .cursor {
+        display: inline;
+    }
+
+    .texto-estatico {
+        display: none;
+    }
+
+    /* En móviles: ocultar animación, mostrar texto fijo */
+    @media (max-width: 768px) {
+
+        .typer,
+        .cursor {
+            display: none !important;
+        }
+
+        .texto-estatico {
+            display: inline !important;
+            color: #8dc63f;
+            /* asegúrate de que sea visible */
+            font-size: 30px;
+        }
+    }
+</style>
+
 <body>
     <div id="loader">
         <div id="status"></div>
@@ -347,7 +388,9 @@
                                 <div class="transparente-texto">
                                     <h1><span class="typer" id="some-id" data-delay="200" data-delim=":"
                                             data-words="Hijos del Campo:Agrotec México" data-colors="red"></span><span
-                                            class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                                            class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
+                                            <span class="texto-estatico">Agrotec México</span>
+                                    </h1>
                                     <h2>Sembrando el conocimiento</h2>
                                 </div>
                                 <p><span class="transparente-inline">-Capacitaciónes -Cursos -Asesorías</span></p>
