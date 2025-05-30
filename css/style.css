@@ -1926,22 +1926,6 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
      1px  1px 0 black;
   }
 
-  .transparente-inline {
-    background-color: rgba(2, 2, 2, 0.5);
-    display: inline;
-    line-height: 0;
-    font-size: 25px; /* o el tamaño que necesites */
-    vertical-align: middle;
-    color: whites;
-    padding: 0px;
-    border-radius: 10px;
-    text-shadow: 
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-  }
-
   .cargando {
     color: rgba(45, 255, 3, 0.617);
     font-size: 1.5em;

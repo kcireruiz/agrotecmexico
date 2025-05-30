@@ -265,7 +265,24 @@
         display: none;
     }
 
-    /* En móviles: ocultar animación, mostrar texto fijo */
+    .transparente-inline {
+        background-color: rgba(2, 2, 2, 0.5);
+        display: inline;
+        line-height: 0;
+        font-size: 25px;
+        /* o el tamaño que necesites */
+        vertical-align: middle;
+        color: whites;
+        padding: 0px;
+        border-radius: 10px;
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
+    }
+
+    /* En móviles: ocultar animación, mostrar texto fijo 
     @media (max-width: 768px) {
 
         .typer,
@@ -276,10 +293,9 @@
         .texto-estatico {
             display: inline !important;
             color: #8dc63f;
-            /* asegúrate de que sea visible */
             font-size: 30px;
         }
-    }
+    }*/
 </style>
 
 <body>
@@ -389,7 +405,7 @@
                                     <h1><span class="typer" id="some-id" data-delay="200" data-delim=":"
                                             data-words="Hijos del Campo:Agrotec México" data-colors="red"></span><span
                                             class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
-                                            <span class="texto-estatico">Agrotec México</span>
+                                        <span class="texto-estatico">Agrotec México</span>
                                     </h1>
                                     <h2>Sembrando el conocimiento</h2>
                                 </div>
