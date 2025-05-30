@@ -267,20 +267,24 @@
 
     .transparente-inline {
         background-color: rgba(2, 2, 2, 0.5);
-        display: inline;
-        line-height: 0;
+        display: inline-block;
+        line-height: 1.2;
         font-size: 25px;
-        /* o el tamaño que necesites */
         vertical-align: middle;
-        color: whites;
-        padding: 0px;
+        color: white;
+        padding: 4px 8px;
         border-radius: 10px;
-        text-shadow:
-            -1px -1px 0 black,
-            1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 0 black;
+        text-shadow: 1px 1px 2px black;
     }
+
+    /* Optimización para móvil */
+    @media (max-width: 768px) {
+        .transparente-inline {
+            text-shadow: none;
+            font-size: 20px;
+        }
+    }
+
 
     /* En móviles: ocultar animación, mostrar texto fijo 
     @media (max-width: 768px) {
