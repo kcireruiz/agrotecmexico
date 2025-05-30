@@ -40,14 +40,14 @@
 				$('.header-block-top').addClass('fixed-menu');
 				$('.nav').removeClass('transparente');
 				$('.logo').removeClass('logo-envuelto');
-				$('.dimension').addClass('c-logo');
-				$('.dimension').removeClass('g-logo');
+				//$('.dimension').addClass('c-logo');
+				//$('.dimension').removeClass('g-logo');
 			} else {
 				$('.header-block-top').removeClass('fixed-menu');
 				$('.nav').addClass('transparente');
 				$('.logo').addClass('logo-envuelto');
-				$('.dimension').addClass('g-logo');
-				$('.dimension').removeClass('c-logo');
+				//$('.dimension').addClass('g-logo');
+				//$('.dimension').removeClass('c-logo');
 			}
 		});
 		
