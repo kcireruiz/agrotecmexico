@@ -1991,11 +1991,11 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
             content: "";
             position: absolute;
             bottom: -45px;
-            left: 70%;
+            left: 52%;
             transform: translateX(-50%) rotate(40deg);
-            width: 300px;
-            height: 400px;
-            background: url('../images/hoja.png') no-repeat center bottom;
+            width: 150px;
+            height: 200px;
+            background: url('../images/hoja2.png') no-repeat center bottom; */
             background-size: contain;
             z-index: -1;
             opacity: 0.8; /* hace que se vea como sombra */
