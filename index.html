@@ -33,7 +33,7 @@
     <link id="changeable-colors" rel="stylesheet" href="css/colors/moderate-green.css" />
 
     <!-- Modernizer -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900'" rel="stylesheet">
@@ -44,53 +44,7 @@
     <![endif]-->
     
 </head>
-<style>
-    .logo-envuelto {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .logo-envuelto::after {
-    content: "";
-    position: absolute;
-    bottom: -65px;
-    left: 45%;
-    transform: translateX(-50%) rotate(40deg);
-    width: 4000px;
-    height: 500px;
-    background: url('images/hoja.png') no-repeat center bottom;
-    background-size: contain;
-    z-index: -1;
-    opacity: 0.8; /* hace que se vea como sombra */
-  }
 
-  /* Estilos para móviles */
-    @media (max-width: 768px) {
-    .logo-envuelto::after {
-            content: "";
-            position: absolute;
-            bottom: -52px;
-            left: 50%;
-            transform: translateX(-50%) rotate(40deg);
-            width: 150px;
-            height: 200px;
-            background: url('images/hoja2.png') no-repeat center bottom; */
-            background-size: contain;
-            z-index: -1;
-            opacity: 0.8; /* hace que se vea como sombra */
-        }
-    }
-
-    .g-logo{
-        height:100px; 
-        width:200px;
-    }
-    @media (max-width: 768px) {
-    .g-logo{
-        height:60px; 
-        width:120px;
-    }
-</style>
 <script>
     $(document).ready(function () {
         var counted = false;
@@ -123,11 +77,6 @@
         btn.textContent = container.classList.contains('expanded') ? '↑ Ver menos' : '↓ Ver más';
     }
 
-    const video = document.querySelector("video");
-
-
-
-
     document.addEventListener("DOMContentLoaded", function () {
         const placeholders = document.querySelectorAll(".youtube-placeholder");
 
@@ -150,6 +99,24 @@
         });
     });
 
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 50) {
+            $('.header-block-top').addClass('fixed-menu');
+            $('.nav').removeClass('transparente');
+            $('.logo').removeClass('logo-envuelto');
+            $('.dimension').addClass('c-logo');
+            $('.dimension').removeClass('g-logo');
+        } else {
+            $('.header-block-top').removeClass('fixed-menu');
+            $('.nav').addClass('transparente');
+            $('.logo').addClass('logo-envuelto');
+            $('.dimension').addClass('g-logo');
+            $('.dimension').removeClass('c-logo');
+        }
+    });
+
+    const video = document.querySelector("video");
+
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -165,7 +132,62 @@
 
     observer.observe(video);
 </script>
+<style>
+        .logo-envuelto {
+            position: relative;
+            display: inline-block;
+        }
 
+        .logo-envuelto::after {
+            content: "";
+            position: absolute;
+            bottom: -75px;
+            left: 60%;
+            transform: translateX(-50%) rotate(40deg);
+            width: 500px;
+            height: 600px;
+            background: url('images/hoja.png') no-repeat center bottom;
+            background-size: contain;
+            z-index: -1;
+            opacity: 0.8;
+            /* hace que se vea como sombra */
+        }
+
+        /* Estilos para móviles */
+        @media (max-width: 768px) {
+            .logo-envuelto::after {
+                content: "";
+                position: absolute;
+                bottom: -52px;
+                left: 50%;
+                transform: translateX(-50%) rotate(40deg);
+                width: 150px;
+                height: 200px;
+                background: url('images/hoja2.png') no-repeat center bottom;
+                */ background-size: contain;
+                z-index: -1;
+                opacity: 0.8;
+                /* hace que se vea como sombra */
+            }
+        }
+
+        .g-logo {
+            height: 100px;
+            width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .g-logo {
+                height: 60px;
+                width: 120px;
+            }
+        }
+
+        .c-logo {
+            height: 60px;
+            width: 120px;
+        }
+    </style>
 <body>
     <div id="loader">
         <div id="status"></div>
@@ -189,15 +211,13 @@
                                 <div class="logo logo-envuelto">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="#">
                                         <picture>
-                                        <!-- Logo para pantallas pequeñas (móvil) -->
-                                        <source srcset="images/agrologo.webp" media="(max-width: 768px)">
-                                        
-                                        <!-- Logo para pantallas grandes (PC) -->
-                                        <img loading="lazy" src="images/agro-logo.webp" alt="Logo Agroempresa"
-                                            style="margin-top: -14px;"
-                                            class="g-logo"
-                                            loading="eager"
-                                            decoding="async">
+                                            <!-- Logo para pantallas pequeñas (móvil) -->
+                                            <source srcset="images/agrologo.webp" media="(max-width: 768px)">
+
+                                            <!-- Logo para pantallas grandes (PC) -->
+                                            <img loading="lazy" src="images/agro-logo.webp" alt="Logo Agroempresa"
+                                                style="margin-top: -14px;" class="dimension g-logo" loading="eager"
+                                                decoding="async">
                                         </picture>
                                     </a>
                                 </div>
@@ -409,12 +429,14 @@
                                             <h2 class="media-body media-heading text-center">Nuevo Webinar</h2>
 
                                             <!-- FACHADA PERSONALIZADA DE VIDEO -->
-                                            <div class="youtube-placeholder" data-id="nc9VzhaDOE0" style="margin-bottom: 10px;">
+                                            <div class="youtube-placeholder" data-id="nc9VzhaDOE0"
+                                                style="margin-bottom: 10px;">
                                                 <div class="play-button"></div>
                                             </div>
 
                                             <h5 class="text-center" style="color: black; padding: 5px;">
-                                                "Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas"
+                                                "Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas
+                                                Prácticas"
                                             </h5>
                                         </div>
                                     </div>
@@ -481,12 +503,14 @@
                                             <h2 class="media-body media-heading text-center">Nuevo Webinar</h2>
 
                                             <!-- FACHADA PERSONALIZADA DE VIDEO -->
-                                            <div class="youtube-placeholder" data-id="0cDyFFjpcfo" style="margin-bottom: 10px;">
+                                            <div class="youtube-placeholder" data-id="0cDyFFjpcfo"
+                                                style="margin-bottom: 10px;">
                                                 <div class="play-button"></div>
                                             </div>
 
                                             <h5 class="text-center" style="color: black; padding: 5px;">
-                                                Inductores de Resistencia en Plantas | Protección Natural contra Plagas y Enfermedades
+                                                Inductores de Resistencia en Plantas | Protección Natural contra Plagas
+                                                y Enfermedades
                                             </h5>
                                         </div>
                                     </div>
