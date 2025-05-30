@@ -1966,51 +1966,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
      1px  1px 0 black;
   }
 
-  .logo-envuelto {
-    position: relative;
-    display: inline-block;
-  }
   
-  .logo-envuelto::after {
-    content: "";
-    position: absolute;
-    bottom: -65px;
-    left: 45%;
-    transform: translateX(-50%) rotate(40deg);
-    width: 4000px;
-    height: 500px;
-    background: url('../images/hoja.png') no-repeat center bottom;
-    background-size: contain;
-    z-index: -1;
-    opacity: 0.8; /* hace que se vea como sombra */
-  }
-
-  /* Estilos para móviles */
-    @media (max-width: 768px) {
-    .logo-envuelto::after {
-            content: "";
-            position: absolute;
-            bottom: -45px;
-            left: 52%;
-            transform: translateX(-50%) rotate(40deg);
-            width: 150px;
-            height: 200px;
-            background: url('../images/hoja2.png') no-repeat center bottom; */
-            background-size: contain;
-            z-index: -1;
-            opacity: 0.8; /* hace que se vea como sombra */
-        }
-    }
-
-    .g-logo{
-        height:100px; 
-        width:200px;
-    }
-    @media (max-width: 768px) {
-    .g-logo{
-        height:60px; 
-        width:120px;
-    }
 
   .titulo {
     color: hsl(120, 78%, 30%); /* verde */

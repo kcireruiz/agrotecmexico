@@ -42,8 +42,55 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
 </head>
+<style>
+    .logo-envuelto {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .logo-envuelto::after {
+    content: "";
+    position: absolute;
+    bottom: -65px;
+    left: 45%;
+    transform: translateX(-50%) rotate(40deg);
+    width: 4000px;
+    height: 500px;
+    background: url('images/hoja.png') no-repeat center bottom;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.8; /* hace que se vea como sombra */
+  }
+
+  /* Estilos para móviles */
+    @media (max-width: 768px) {
+    .logo-envuelto::after {
+            content: "";
+            position: absolute;
+            bottom: -52px;
+            left: 50%;
+            transform: translateX(-50%) rotate(40deg);
+            width: 150px;
+            height: 200px;
+            background: url('images/hoja2.png') no-repeat center bottom; */
+            background-size: contain;
+            z-index: -1;
+            opacity: 0.8; /* hace que se vea como sombra */
+        }
+    }
+
+    .g-logo{
+        height:100px; 
+        width:200px;
+    }
+    @media (max-width: 768px) {
+    .g-logo{
+        height:60px; 
+        width:120px;
+    }
+</style>
 <script>
     $(document).ready(function () {
         var counted = false;
