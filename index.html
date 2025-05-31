@@ -157,33 +157,38 @@
         flex-direction: column;
     }
 
-    /* HTML: <div class="loader"></div> */
-    #status {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    --c:no-repeat linear-gradient(hsl(120, 78%, 30%));
-    background:
-        var(--c) center/100% 10px,
-        var(--c) center/10px 100%;
+    #status{
+        display: block;
+        position: relative;
+        height: 32px;
+        width: 140px;
+        border: 3px solid #fff;
+        border-radius: 20px;
+        box-sizing: border-box;
+        animation: balancing 2s linear infinite alternate;
+        transform-origin: center center;
     }
-    #status:before {
-    content:'';
-    position: absolute;
-    inset: 0;
-    background:
-        var(--c) 0    0,
-        var(--c) 100% 0,
-        var(--c) 0    100%,
-        var(--c) 100% 100%;
-    background-size: 15.5px 15.5px;
-    animation: l16 1.5s infinite cubic-bezier(0.3,1,0,1);
+     #status:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 52px;
+        height: 26px;
+        border-radius: 20px;
+        background: hsl(120, 78%, 30%);
+        animation: ballbns 2s linear infinite alternate;
     }
-    @keyframes l16 {
-    33%  {inset:-10px;transform: rotate(0deg)}
-    66%  {inset:-10px;transform: rotate(90deg)}
-    100% {inset:0    ;transform: rotate(90deg)}
+    @keyframes ballbns {
+        0% {  left: 0; transform: translateX(0%); }
+        100% {  left: 100%; transform: translateX(-100%); }
     }
+    @keyframes balancing {
+        0% {  transform: rotate(-25deg); }
+        50% {  transform: rotate(0deg); }
+        100% {  transform: rotate(25deg); }
+    }
+  
 
     .titulo {
         color: hsl(120, 78%, 30%);
