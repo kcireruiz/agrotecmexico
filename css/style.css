@@ -401,15 +401,6 @@ html, body{ height: 100%; }
   font-display: swap; /* asegúrate de tener esto en la @font-face */
 }
 
-@media (max-width: 768px) {
-  .banner-text h2 {
-    font-size: 28px;
-    line-height: 1.4;
-    padding-bottom: 10px;
-    letter-spacing: 1px;
-  }
-}
-
 .banner-text p{
 	font-family: 'Roboto', sans-serif;
 	font-size:18px;
