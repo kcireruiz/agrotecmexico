@@ -2121,12 +2121,15 @@
             z-index: 1000;
             /* asegura que esté encima de otros elementos */
         }
+
+        @media (max-width: 768px) {
+            .gif-fijo {
+                display: none;
+            }
+        }
     </style>
         <a href="https://wa.me/525532376454?text=Hola%2C%20quiero%20más%20información" target="_blank">
-            <picture>
-                    <source media="(max-width: 768px)" srcset="images/robot.webp">
-                    <img src="images/agrotec_transparent.gif" alt="gif decorativo" class="gif-fijo" width="100" height="100">
-            </picture>
+             <img src="images/agrotec_transparent.gif" alt="gif decorativo" class="gif-fijo" width="100" height="100">
         </a>
     <a href="#" class="scrollup" style="display: none;">Scroll</a>
 
