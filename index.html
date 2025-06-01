@@ -67,86 +67,82 @@
         flex-direction: column;
     }
 
-    .status {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 20px auto;
-}
+.status {
+        transform: rotateZ(45deg);
+        perspective: 1000px;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        color: #020308;
+      }
+        .status:before,
+        .status:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+          transform: rotateX(70deg);
+          animation: 1s spin linear infinite;
+        }
+        .status:after {
+          color: #0fa41c;
+          transform: rotateY(70deg);
+          animation-delay: .4s;
+        }
 
-/* Base (tierra) */
-.status::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 80px;
-  height: 40px;
-  background: #6b4e31;
-  border-radius: 100px 100px 0 0;
-  transform: translateX(-50%);
-}
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotateZ(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotateZ(360deg);
+        }
+      }
 
-/* Tronco */
-.status::after {
-  content: "";
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  width: 6px;
-  height: 0px;
-  background: #4e342e;
-  transform: translateX(-50%);
-  animation: crecerTronco 2s ease-out forwards;
-}
+      @keyframes rotateccw {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(-360deg);
+        }
+      }
 
-/* Hojas (elementos aparte) */
-.status::marker {
-  display: none;
-}
-
-.status .hoja {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, #4caf50 60%, #388e3c);
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(0);
-  animation: brotar 1s ease-out forwards;
-}
-
-/* Izquierda hoja */
-.status .hoja.izq {
-  bottom: 55px;
-  left: 30%;
-  animation-delay: 2s;
-}
-
-/* Derecha hoja */
-.status .hoja.der {
-  bottom: 55px;
-  left: 60%;
-  animation-delay: 2.3s;
-}
-
-@keyframes crecerTronco {
-  to {
-    height: 40px;
-  }
-}
-
-@keyframes brotar {
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
+      @keyframes spin {
+        0%,
+        100% {
+          box-shadow: .2em 0px 0 0px currentcolor;
+        }
+        12% {
+          box-shadow: .2em .2em 0 0 currentcolor;
+        }
+        25% {
+          box-shadow: 0 .2em 0 0px currentcolor;
+        }
+        37% {
+          box-shadow: -.2em .2em 0 0 currentcolor;
+        }
+        50% {
+          box-shadow: -.2em 0 0 0 currentcolor;
+        }
+        62% {
+          box-shadow: -.2em -.2em 0 0 currentcolor;
+        }
+        75% {
+          box-shadow: 0px -.2em 0 0 currentcolor;
+        }
+        87% {
+          box-shadow: .2em -.2em 0 0 currentcolor;
+        }
+      }
+   
 
     .titulo {
-        color: #020308;
+        color: #0fa41c;
         font-size: 1.5em;
         font-family: cursive;
         text-align: center;
@@ -266,7 +262,7 @@
     }
 
 
-    /* En móviles: ocultar animación, mostrar texto fijo 
+    /* En móviles: ocultar animación, mostrar texto fijo */
     @media (max-width: 768px) {
 
         .typer,
@@ -278,13 +274,18 @@
             display: inline !important;
             color: #8dc63f;
             font-size: 30px;
+            text-shadow: 
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px  1px 0 black,
+            1px  1px 0 black;
         }
-    }*/
+    }
 </style>
 
 <body>
     <div id="loader">
-        <div class="status" style="color: #FF3D00;"></div>
+        <div class="status"></div>
         <div class="titulo">Espere Cargando<span class="puntos"></span></div>
     </div>
     <div id="site-header">
@@ -391,9 +392,9 @@
                                             class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
                                         <span class="texto-estatico">Agrotec México</span>
                                     </h1>
-                                    
+                                    <h2>Sembrando el conocimiento</h2>
                                 </div>
-                                <h2>Sembrando el conocimiento</h2>
+                                
                                 <p><span class="transparente-inline">-Capacitaciónes -Cursos -Asesorías</span></p>
                                 <div class="book-btn">
                                     <a href="#menu" class="table-btn hvr-underline-from-center">Nuestros Cursos</a>
