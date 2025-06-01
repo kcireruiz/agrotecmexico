@@ -43,8 +43,7 @@
     <link rel="stylesheet" href="css/colors/moderate-green.css">
   </noscript>
 
-  <!-- jQuery con defer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+
 
   <!-- Soporte IE antiguo (opcional, casi nadie usa IE < 11 hoy) -->
   <!--[if lt IE 9]>
@@ -53,100 +52,6 @@
   <![endif]-->
 </head>
 
-<script>
-    /*[document.addEventListener("DOMContentLoaded", function () {
-        const loader = document.getElementById("loader");
-        if (loader) {
-            loader.style.display = "none";
-        }
-    });*/
-
-    $(document).ready(function () {
-        var counted = false;
-        $(window).scroll(function () {
-            var oTop = $('.counter').first().offset().top - window.innerHeight;
-            if (!counted && $(window).scrollTop() > oTop) {
-                $('.counter').each(function () {
-                    var $this = $(this);
-                    $({ countNum: $this.text() }).animate({
-                        countNum: $this.data('count')
-                    }, {
-                        duration: 2000,
-                        easing: 'swing',
-                        step: function () {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $this.text(this.countNum);
-                        }
-                    });
-                });
-                counted = true;
-            }
-        });
-    });
-
-    function toggleText(id, btn) {
-        const container = document.getElementById(id);
-        container.classList.toggle('expanded');
-        btn.textContent = container.classList.contains('expanded') ? '↑ Ver menos' : '↓ Ver más';
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const placeholders = document.querySelectorAll(".youtube-placeholder");
-
-        placeholders.forEach(el => {
-            const videoId = el.dataset.id;
-            el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
-
-            el.addEventListener("click", () => {
-                const iframe = document.createElement("iframe");
-                iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
-                iframe.setAttribute("frameborder", "0");
-                iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-                iframe.setAttribute("allowfullscreen", "");
-                iframe.setAttribute("loading", "lazy");
-                iframe.style.width = "100%";
-                iframe.style.height = "100%";
-                el.innerHTML = "";
-                el.appendChild(iframe);
-            });
-        });
-    });
-
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 50) {
-            $('.header-block-top').addClass('fixed-menu');
-            $('.nav').removeClass('transparente');
-            $('.logo').removeClass('logo-envuelto');
-            $('.dimension').addClass('c-logo');
-            $('.dimension').removeClass('g-logo');
-        } else {
-            $('.header-block-top').removeClass('fixed-menu');
-            $('.nav').addClass('transparente');
-            $('.logo').addClass('logo-envuelto');
-            $('.dimension').addClass('g-logo');
-            $('.dimension').removeClass('c-logo');
-        }
-    });
-
-    const video = document.querySelector("video");
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const src = video.getAttribute("data-src");
-                if (src) {
-                    video.src = src;
-                    video.load();
-                }
-                obs.unobserve(video);
-            }
-        });
-    });
-
-    observer.observe(video);
-</script>
 <style>
     #loader {
         position: fixed;
@@ -2223,6 +2128,102 @@
     <script src="js/bootstrap.min.js" defer></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js" defer></script>
+      <!-- jQuery con defer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    /*[document.addEventListener("DOMContentLoaded", function () {
+        const loader = document.getElementById("loader");
+        if (loader) {
+            loader.style.display = "none";
+        }
+    });*/
+
+    $(document).ready(function () {
+        var counted = false;
+        $(window).scroll(function () {
+            var oTop = $('.counter').first().offset().top - window.innerHeight;
+            if (!counted && $(window).scrollTop() > oTop) {
+                $('.counter').each(function () {
+                    var $this = $(this);
+                    $({ countNum: $this.text() }).animate({
+                        countNum: $this.data('count')
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+                    });
+                });
+                counted = true;
+            }
+        });
+    });
+
+    function toggleText(id, btn) {
+        const container = document.getElementById(id);
+        container.classList.toggle('expanded');
+        btn.textContent = container.classList.contains('expanded') ? '↑ Ver menos' : '↓ Ver más';
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const placeholders = document.querySelectorAll(".youtube-placeholder");
+
+        placeholders.forEach(el => {
+            const videoId = el.dataset.id;
+            el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+
+            el.addEventListener("click", () => {
+                const iframe = document.createElement("iframe");
+                iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+                iframe.setAttribute("frameborder", "0");
+                iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                iframe.setAttribute("allowfullscreen", "");
+                iframe.setAttribute("loading", "lazy");
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                el.innerHTML = "";
+                el.appendChild(iframe);
+            });
+        });
+    });
+
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 50) {
+            $('.header-block-top').addClass('fixed-menu');
+            $('.nav').removeClass('transparente');
+            $('.logo').removeClass('logo-envuelto');
+            $('.dimension').addClass('c-logo');
+            $('.dimension').removeClass('g-logo');
+        } else {
+            $('.header-block-top').removeClass('fixed-menu');
+            $('.nav').addClass('transparente');
+            $('.logo').addClass('logo-envuelto');
+            $('.dimension').addClass('g-logo');
+            $('.dimension').removeClass('c-logo');
+        }
+    });
+
+    const video = document.querySelector("video");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const src = video.getAttribute("data-src");
+                if (src) {
+                    video.src = src;
+                    video.load();
+                }
+                obs.unobserve(video);
+            }
+        });
+    });
+
+    observer.observe(video);
+</script>
 </body>
 
 </html>
