@@ -2,49 +2,55 @@
 <html lang="en">
 
 <head>
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Preload de logo -->
+  <link rel="preload" as="image" href="images/agro-logo.webp" type="image/webp">
 
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>Agrotec-Mexico</title>
+  <meta name="keywords" content="sinergia,hijos del campo,campo,america,cursos,cursos agricultura,agrotec america,agrotec,agrotec-Mexico,agrotecnología, agricultura, soluciones agrícolas, tecnología agrícola, México">
+  <meta name="description" content="Somos Agrotec México, expertos en soluciones tecnológicas agrícolas. Conoce nuestros servicios.">
+  <meta name="author" content="Agrotec México">
 
-    <!-- Site Metas -->
-    <title>Agrotec-Mexico</title>
-    <meta name="keywords"
-        content="sinergia,hijos del campo,campo,america,cursos,cursos agricultura,agrotec america,agrotec,agrotec-Mexico,agrotecnología, agricultura, soluciones agrícolas, tecnología agrícola, México">
-    <meta name="description"
-        content="Somos Agrotec México, expertos en soluciones tecnológicas agrícolas. Conoce nuestros servicios.">
-    <meta name="author" content="Agrotec México">
+  <!-- Íconos -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <!-- Site Icons -->
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- color -->
-    <link id="changeable-colors" rel="stylesheet" href="css/colors/moderate-green.css" />
-
-    <!-- Modernizer -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts (optimizadas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
     <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900'" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  </noscript>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- CSS crítico opcional inline (estilos básicos mínimos, si aplica) -->
+  <!-- <style>body { font-family: 'Roboto', sans-serif; }</style> -->
 
+  <!-- CSS con carga diferida -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/colors/moderate-green.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/colors/moderate-green.css">
+  </noscript>
+
+  <!-- jQuery con defer -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+
+  <!-- Soporte IE antiguo (opcional, casi nadie usa IE < 11 hoy) -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 <script>
@@ -162,7 +168,7 @@
         border-radius: 50%;
         width: 48px;
         height: 48px;
-        color: #000;
+        color: #fff;
       }
         #status:before,
         #status:after {
@@ -177,8 +183,8 @@
           transform: rotateX(70deg);
           animation: 1s spin linear infinite;
         }
-        #status:after {
-          color: hsl(120, 78%, 30%);
+        .status:after {
+          color: #FF3D00;
           transform: rotateY(70deg);
           animation-delay: .4s;
         }
@@ -370,7 +376,7 @@
 <body>
     <div id="loader">
         <div id="status"></div>
-         <!-- <div class="titulo">Espere Cargando<span class="puntos"></span></div>-->
+        <div class="titulo">Espere Cargando<span class="puntos"></span></div>
     </div>
     <div id="site-header">
         <header id="header" class="header-block-top">
@@ -389,15 +395,15 @@
                                 </button>
                                 <div class="logo logo-envuelto">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="#">
-                                       <!-- <picture>
-                                             Logo para pantallas pequeñas (móvil) 
-                                            <source srcset="images/agrologo.webp" media="(max-width: 768px)">-->
+                                        <picture>
+                                            <!-- Logo para pantallas pequeñas (móvil) -->
+                                            <source srcset="images/agrologo.webp" media="(max-width: 768px)">
 
-                                            <!-- Logo para pantallas grandes (PC) 
-                                            <img loading="eager"src="images/agro-logo.webp" alt="Logo Agroempresa"
-                                                 class="dimension g-logo" 
+                                            <!-- Logo para pantallas grandes (PC) -->
+                                            <img loading="lazy" src="images/agro-logo.webp" alt="Logo Agroempresa"
+                                                style="margin-top: -14px;" class="dimension g-logo" loading="eager"
                                                 decoding="async">
-                                        </picture>-->
+                                        </picture>
                                     </a>
                                 </div>
                             </div>
@@ -470,21 +476,21 @@
                     <div class="banner-static">
                         <div class="banner-text">
                             <div class="banner-cell">
-                                <!-- <div class="transparente-texto">
+                                <div class="transparente-texto">
                                     <h1><span class="typer" id="some-id" data-delay="200" data-delim=":"
                                             data-words="Hijos del Campo:Agrotec México" data-colors="red"></span><span
                                             class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
                                         <span class="texto-estatico">Agrotec México</span>
                                     </h1>
                                     
-                                </div>-->
-                                  <!-- <h2>Sembrando el conocimiento</h2>-->
-                                <!--<p><span class="transparente-inline">-Capacitaciónes -Cursos -Asesorías</span></p>-->
-                                 <!-- <div class="book-btn">
+                                </div>
+                                <h2>Sembrando el conocimiento</h2>
+                                <p><span class="transparente-inline">-Capacitaciónes -Cursos -Asesorías</span></p>
+                                <div class="book-btn">
                                     <a href="#menu" class="table-btn hvr-underline-from-center">Nuestros Cursos</a>
                                 </div>
                                 <a href="#about">
-                                    <div class="mouse" style="z-index: 999999;"></div>-->
+                                    <div class="mouse" style="z-index: 999999;"></div>
                                 </a>
                             </div>
                             <!-- end banner-cell -->
