@@ -205,10 +205,12 @@
             position: absolute;
             bottom: -52px;
             left: 50%;
-            transform: translateX(-50%) rotate(40deg);
+            transform: translateX(-50%) rotate(60deg);
             width: 150px;
             height: 200px;
             background-image: none;
+            background-color: #020308;
+            border-radius: 100px;
             z-index: -1;
             opacity: 0.8;
             /* hace que se vea como sombra */
@@ -281,6 +283,17 @@
             1px  1px 0 black;
         }
     }
+
+    .svg-curso {
+        position: relative;left: 33%;
+    }
+
+     @media (max-width: 768px) {
+        .svg-curso {
+            position: relative;left: 17%;
+        }
+    }
+
 </style>
 
 <body>
@@ -372,10 +385,19 @@
         <!-- end container -->
     <!-- </div> -->
     <section id="banner" class="banner-video full-screen-mode parallax">
-        <video autoplay muted loop playsinline poster="images/banner-01.webp" class="background-video d-none d-md-block">
-            <source src="images/video_banner.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-        </video>
+        <p class="visible-xs">
+            <!-- Visible solo en móvil -->
+             <img src="images/banner-02.jpg" alt="banner fresas agrotec" class="background-video">
+        </p>
+
+        <p class="hidden-xs">
+            <!-- Visible en tablet y escritorio -->
+            <video autoplay muted loop playsinline poster="images/banner-01.webp" class="background-video">
+                <source src="images/video_banner.mp4" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
+        </p>
+
         <!--  <img src="images/banner.jpg" class="background-image d-block d-md-none" alt="Banner móvil">-->
         <!-- Capa oscura -->
         <div class="video-overlay"></div>
@@ -690,7 +712,7 @@
                     </div>
                     <div class="tab-menu">
                         <div class="slider slider-nav">
-                            <div class="tab-title-menu" style="position: relative;left: 33%;">
+                            <div class="tab-title-menu svg-curso">
                                 <h3 style="padding: 5px;">Agricultura</h3>
                                 <p><svg id="myIcon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                                         <g id="a" />
@@ -788,7 +810,7 @@
                                         <g id="ax" />
                                     </svg></p>
                             </div>
-                            <div class="tab-title-menu" style="position: relative;left: 33%;">
+                            <div class="tab-title-menu svg-curso">
                                 <h3 style="padding: 5px;">Pecuario</h3>
                                 <p><svg id="myIcon" style="enable-background:new 0 0 96 96;" version="1.1"
                                         viewBox="0 0 96 96" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -1317,7 +1339,7 @@
                                             <div class="sf-team">
                                                 <div class="thumb">
                                                     <a href="#"><img loading="lazy" src="images/ponente1.jpg"
-                                                            height="360px" alt=""></a>
+                                                            height="300px" alt="" style="padding-left: 15px; padding-right: 15px;"></a>
                                                 </div>
                                                 <div class="text-col" id="bio1">
                                                     <h4><strong>Luis Alejandro Salazar</strong></h4>
@@ -1347,7 +1369,7 @@
                                             <div class="sf-team">
                                                 <div class="thumb">
                                                     <a href="#"><img loading="lazy" src="images/ponente2.jpg"
-                                                            height="360px" alt=""></a>
+                                                            height="300px" alt="" style="padding-left: 15px; padding-right: 15px;"></a>
                                                 </div>
                                                 <div class="text-col" id="bio2">
                                                     <h4><strong>empty</strong></h4>
@@ -1377,7 +1399,7 @@
                                             <div class="sf-team">
                                                 <div class="thumb">
                                                     <a href="#"><img loading="lazy" src="images/ponente3.jpg"
-                                                            height="360px" alt=""></a>
+                                                            height="300px" alt="" style="padding-left: 15px; padding-right: 15px;"></a>
                                                 </div>
                                                 <div class="text-col" id="bio3">
                                                     <h4><strong>María Esther Alfaro Rojas</strong></h4>
@@ -1642,34 +1664,33 @@
                     <div class="blog-box clearfix">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <div class="col-md-6 col-sm-6">
-                                <div class="blog-block">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe loading="lazy" class="embed-responsive-item"
-                                            src="https://www.youtube.com/embed/nc9VzhaDOE0"
-                                            title="&quot;Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas Prácticas&quot;"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="blog-block" style="padding: 10px;">
+                                    <!-- FACHADA PERSONALIZADA DE VIDEO -->
+                                    <div class="youtube-placeholder" data-id="nc9VzhaDOE0"
+                                        style="margin-bottom: 10px;">
+                                        <div class="play-button"></div>
                                     </div>
-                                    <h5 style="color: black; padding: 5px;">"Introducción al Cultivo de Pitahaya:
-                                        Recomendaciones y Buenas Prácticas"</h5>
+
+                                    <h5 class="text-center" style="color: black; padding: 5px;">
+                                        <a href="https://www.youtube.com/embed/nc9VzhaDOE0" target="_blank">"Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas
+                                        Prácticas"</a>
+                                    </h5>
                                 </div>
                             </div>
                             <!-- end col -->
                         </div>
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <div class="col-md-6 col-sm-6">
-                                <div class="blog-block">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe loading="lazy" class="embed-responsive-item"
-                                            src="https://www.youtube.com/embed/0cDyFFjpcfo"
-                                            title="🎥 Inductores de Resistencia en Plantas | Protección Natural contra Plagas y Enfermedades 🌿🛡️"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="blog-block" style="padding: 10px;">
+                                    <!-- FACHADA PERSONALIZADA DE VIDEO -->
+                                    <div class="youtube-placeholder" data-id="0cDyFFjpcfo"
+                                        style="margin-bottom: 10px;">
+                                        <div class="play-button"></div>
                                     </div>
-                                    <h5 style="color: black; padding: 5px;">🎥 Inductores de Resistencia en Plantas |
-                                        Protección Natural contra Plagas y Enfermedades 🌿🛡️</h5>
+                                    <h5 class="text-center" style="color: black; padding: 5px;">
+                                        <a href="https://www.youtube.com/embed/0cDyFFjpcfo" target="_blank">🎥 Inductores de Resistencia en Plantas |
+                                        Protección Natural contra Plagas y Enfermedades 🌿🛡️</a>
+                                    </h5>
                                 </div>
                             </div>
                             <!-- end col -->
@@ -1726,7 +1747,7 @@
                                 <div class="stat-box">
                                     <i class="fa fa-graduation-cap text-success"></i>
                                     <span class="counter" data-count="328">0</span>
-                                    <p>Cursos vendidos</p>
+                                    <h3>Cursos vendidos</h3>
                                 </div>
                             </div>
 
@@ -1734,7 +1755,7 @@
                                 <div class="stat-box">
                                     <i class="fa fa-users text-primary"></i>
                                     <span class="counter" data-count="274">0</span>
-                                    <p>Productores capacitados</p>
+                                    <h3>Productores capacitados</h3>
                                 </div>
                             </div>
 
@@ -1742,7 +1763,7 @@
                                 <div class="stat-box">
                                     <i class="fa fa-leaf text-success"></i>
                                     <span class="counter" data-count="4120">0</span>
-                                    <p>Plántulas sembradas</p>
+                                    <h3>Plántulas sembradas</h3>
                                 </div>
                             </div>
 
@@ -1750,7 +1771,7 @@
                                 <div class="stat-box">
                                     <i class="fa fa-tree text-warning"></i>
                                     <span class="counter" data-count="1090">0</span>
-                                    <p>Árboles cultivados</p>
+                                    <h3>Árboles cultivados</h3>
                                 </div>
                             </div>
 
@@ -2115,9 +2136,10 @@
         </a>
     <a href="#" class="scrollup" style="display: none;">Scroll</a>
 
-    <section id="color-panel" class="close-color-panel">
+            <!-- Colors -->
+   <!-- <section id="color-panel" class="close-color-panel">
         <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
-        <!-- Colors -->
+
         <div class="segment">
             <h4 class="gray2 normal no-padding">Color</h4>
             <a title="moderate-green" class="switcher moderate-green-bg"></a>
@@ -2125,7 +2147,7 @@
             <a title="orange" class="switcher orange-bg"></a>
             <a title="strong-blue" class="switcher strong-blue-bg"></a>
         </div>
-    </section>
+    </section>-->
 
     <!-- ALL JS FILES -->
     <script src="js/modernizer.min.js" defer></script>

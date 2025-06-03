@@ -638,6 +638,16 @@ html, body{ height: 100%; }
 	position:relative;
 }
 
+@media (max-width: 768px) {
+        .special-menu{
+	background:none;
+    background-color: #8cd2a6;
+	background-attachment:fixed;
+	background-size:cover;
+	position:relative;
+}
+}
+
 .special-menu:before {
     content: '';
     display: inline-block;
@@ -1149,12 +1159,21 @@ html, body{ height: 100%; }
 /*------------------------------------------------------------------
     BLOG AREA
 -------------------------------------------------------------------*/
-
 .blog-main{
 	background:url(../images/img5.jpg) no-repeat center;
 	background-attachment:fixed;
 	background-size:cover;
 	position:relative;
+}
+
+@media (max-width: 768px) {
+        .blog-main{
+	background:none;
+    background-color: #8cd2a6;
+	background-attachment:fixed;
+	background-size:cover;
+	position:relative;
+    }
 }
 
 .blog-main::before {
@@ -1533,11 +1552,22 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 -------------------------------------------------------------------*/
 
 .footer-main{}
+
 .footer-news{
 	background:url(../images/img4.jpg) no-repeat center;
 	background-attachment:fixed;
 	background-size:cover;
 	position:relative;
+}
+
+@media (max-width: 768px) {
+    .footer-news{
+	background:none;
+    background-color: #8cd2a6;
+	background-attachment:fixed;
+	background-size:cover;
+	position:relative;
+    }
 }
 
 .footer-news::before {
@@ -1638,9 +1668,9 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     padding: 4px;
 }
 .footer-box {
-	background-image:-moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(..images/footer_background.webp);
+	/*background-image:-moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(..images/footer_background.webp);
 	background-image:-webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(../images/footer_background.webp);
-	background-image:radial-gradient(ellipse at center, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(../images/footer_background.webp);
+	background-image:radial-gradient(ellipse at center, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(../images/footer_background.webp);*/
 	background-color:#111;background-position:center;background-repeat:no-repeat;background-size:cover
 	}
 .socials-box li {
