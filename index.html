@@ -32,7 +32,7 @@
   <!-- <style>body { font-family: 'Roboto', sans-serif; }</style> -->
 
   <!-- CSS con carga diferida -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css">-->
   <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/colors/moderate-green.css" media="print" onload="this.media='all'">
@@ -50,6 +50,22 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+    <script>
+        (function() {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'css/bootstrap.min.css';
+        if (window.innerWidth <= 768) {
+            // En móvil: carga diferida
+            link.media = 'print';
+            link.onload = function() { this.media = 'all'; };
+        } else {
+            // En escritorio: carga inmediata
+            link.media = 'all';
+        }
+        document.head.appendChild(link);
+        })();
+    </script>
 </head>
 
 <style>
