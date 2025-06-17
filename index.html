@@ -2,6 +2,22 @@
 <html lang="en">
 
 <head>
+     <script>
+        (function() {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'css/bootstrap.min.css';
+        if (window.innerWidth <= 768) {
+            // En móvil: carga diferida
+            link.media = 'print';
+            link.onload = function() { this.media = 'all'; };
+        } else {
+            // En escritorio: carga inmediata
+            link.media = 'all';
+        }
+        document.head.appendChild(link);
+        })();
+    </script>
   <!-- Preload de logo -->
   <link rel="preload" as="image" href="images/agrologo.webp" type="image/webp">
 
@@ -32,12 +48,12 @@
   <!-- <style>body { font-family: 'Roboto', sans-serif; }</style> -->
 
   <!-- CSS con carga diferida -->
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css">-->
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" media="print" onload="this.media='all'">-->
   <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/colors/moderate-green.css" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/colors/moderate-green.css">
@@ -50,22 +66,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-    <script>
-        (function() {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'css/bootstrap.min.css';
-        if (window.innerWidth <= 768) {
-            // En móvil: carga diferida
-            link.media = 'print';
-            link.onload = function() { this.media = 'all'; };
-        } else {
-            // En escritorio: carga inmediata
-            link.media = 'all';
-        }
-        document.head.appendChild(link);
-        })();
-    </script>
 </head>
 
 <style>
@@ -1348,9 +1348,13 @@ Luis destaca por su pasión por la fitosanidad, con especial interés en las ár
                                                 </div>
                                                 <div class="text-col" id="bio2">
                                                     <h4><strong>Ingeniera Agrónoma Fitotecnista</strong></h4>
-                                                    <p class="text-justify">Especialista en Parasitología Agrícola. Su trayectoria profesional se ha centrado en la asesoría técnica de cultivos como papa, chile, tomate, maíz y trigo, destacándose por su habilidad para potenciar la participación de mercado y fortalecer relaciones estratégicas con productores y empresas del sector agrícola. Entre sus principales logros figura el aumento significativo en la captación de clientes y un crecimiento de hasta un 65% en ventas durante su gestión en cargos gerenciales.
+                                                    <p class="text-justify">Especialista en recopilación y análisis de datos productivos, evaluación de variables agrícolas, y desarrollo de programas estratégicos en trazabilidad, cadena de suministro, calidad e inocuidad.
 
-Bedaín ha complementado su formación con numerosos cursos y seminarios especializados en nutrición vegetal, manejo de enfermedades, análisis de suelos y aplicación estratégica de fungicidas, tanto de manera presencial como virtual. Además, ha compartido su conocimiento a través de ponencias en foros académicos y profesionales, consolidándose como un referente en su área.</p>
+Su experiencia aporta valor en la implementación de procesos integrales desde la planificación hasta la cosecha, optimizando la eficiencia productiva y garantizando altos estándares de calidad.
+
+Cuenta con manejo avanzado de herramientas geoespaciales, software estadístico (Minitab, InfoStat), Power BI (básico) y Excel avanzado con desarrollo de macros, respaldado con certificación DC3.
+
+Con un nivel de inglés B2 y sólida experiencia en el trabajo bajo esquemas de certificación internacional en fitosanidad, nutrición y responsabilidad social, participa activamente en proyectos orientados a cultivos orgánicos y convencionales.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio2', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1371,7 +1375,7 @@ Bedaín ha complementado su formación con numerosos cursos y seminarios especia
                                                 </div>
                                                 <div class="text-col" id="bio3">
                                                     <h4><strong>Ingeniera Agrónoma</strong></h4>
-                                                    <p class="text-justify">Especialista en producción sustentable, cuenta con sólida experiencia en asesoría técnica, desarrollo de estrategias de manejo agrícola y vinculación comercial en el sector. Ha trabajado en el manejo de cultivos intensivos como jitomate, cebolla, maíz, brócoli, lechuga, nopal y pitahaya, contribuyendo a optimizar procesos productivos y mejorar rendimientos.
+                                                    <p class="text-justify">Especialista en Producción Sustentable. Cuenta con sólida experiencia en asesoría técnica, desarrollo de estrategias de manejo agrícola y vinculación comercial en el sector. Ha trabajado en el manejo de cultivos intensivos como jitomate, cebolla, maíz, brócoli, lechuga, nopal y pitahaya, contribuyendo a optimizar procesos productivos y mejorar rendimientos.
 
 Su trayectoria incluye participación en proyectos agrícolas en diversas zonas del Bajío y el Altiplano Central, donde ha destacado por su conocimiento en el manejo responsable de plaguicidas, calibración de equipos de aplicación y la implementación de Buenas Prácticas Agrícolas (BPA).</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio3', this)">
@@ -1394,11 +1398,9 @@ Su trayectoria incluye participación en proyectos agrícolas en diversas zonas 
                                                 </div>
                                                 <div class="text-col" id="bio4">
                                                     <h4><strong>Ingeniero Agrónomo </strong></h4>
-                                                    <p class="text-justify">Con amplia experiencia en el manejo y producción de diversos cultivos como maíz, café, rambutan, mango, papaya, plátano, banano y pastizales, así como en la producción animal de bovinos, leche, aves, borregos y abejas.
+                                                    <p class="text-justify">Especialista en Parasitología Agrícola. Aporta más de 15 años de experiencia en el sector agropecuario, desempeñándose en roles clave de asesoría técnica, manejo de cultivos, control fitosanitario y dirección comercial en empresas de alto prestigio como Agrícola El Morón, Agroservicios Nieto y Grupo Plantagro.
 
-Ha participado activamente en programas gubernamentales, incluyendo simposios de sistemas silvopastoriles, aportando conocimientos técnicos y prácticos para el desarrollo sostenible del sector agropecuario.
-
-Actualmente se desempeña como ponente y asesor, compartiendo su experiencia tanto en modalidad presencial como en línea, con productores de distintas regiones de la República Mexicana, contribuyendo a la mejora continua y la profesionalización del campo.</p>
+Su trayectoria profesional se ha centrado en la asesoría técnica de cultivos como papa, chile, tomate, maíz y trigo, destacándose por su habilidad para potenciar la participación de mercado y fortalecer relaciones estratégicas con productores y empresas del sector agrícola. Entre sus principales logros figura el aumento significativo en la captación de clientes y un crecimiento de hasta un 65% en ventas durante su gestión en cargos gerenciales.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio4', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1419,11 +1421,11 @@ Actualmente se desempeña como ponente y asesor, compartiendo su experiencia tan
                                                 </div>
                                                 <div class="text-col" id="bio5">
                                                     <h4><strong>Ingeniero agrónomo zootecnista</strong></h4>
-                                                    <p class="text-justify">Profesional con competencias gerenciales y sólida experiencia en administración, finanzas, atención al cliente y formación de capital humano. Ha desarrollado su labor como asesora e instructora en diversas áreas, destacándose recientemente en el sector agrícola, donde ha capacitado a productores en corridas financieras, rentabilidad de cultivos y análisis de costos.
+                                                    <p class="text-justify">Con amplia experiencia en el manejo y producción de diversos cultivos como maíz, café, rambutan, mango, papaya, plátano, banano y pastizales, así como en la producción animal de bovinos, leche, aves, borregos y abejas.
 
-Además, ha colaborado en el diseño y ejecución de proyectos productivos para microempresas rurales, contribuyendo a fortalecer su sostenibilidad y facilitar su acceso a financiamiento.
+Ha participado activamente en programas gubernamentales, incluyendo simposios de sistemas silvopastoriles, aportando conocimientos técnicos y prácticos para el desarrollo sostenible del sector agropecuario.
 
-Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa para fomentar el crecimiento económico y social en comunidades del sector agropecuario.</p>
+Actualmente se desempeña como ponente y asesor, compartiendo su experiencia tanto en modalidad presencial como en línea, con productores de distintas regiones de la República Mexicana, contribuyendo a la mejora continua y la profesionalización del campo.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio5', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1444,17 +1446,11 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                                 </div>
                                                 <div class="text-col" id="bio6">
                                                     <h4><strong>Lic. en Recursos Humanos</strong></h4>
-                                                    <p class="text-justify">Ing. Agrónoma Fitotecnista
-                                                        Con experiencia y enfoque en recabación de datos, evaluación de
-                                                        variables y diseño e implementación de programas
-                                                        de trazabilidad, Supply Chain, calidad e inocuidad, con
-                                                        proyecciones plantación-cosecha.
-                                                        Manejo de programas geosatelitales y
-                                                        estadisticos Minitab, Infostat, básico en Power BI , excel
-                                                        avanzado y elaboración de macros con certificación DC3.
-                                                        inglés nivel B2 trabajando esquemas bajo certificación
-                                                        internacional en fitosanidad, nutrición y responsabilidad
-                                                        social en cultivos órganicos y convencionales. </p>
+                                                    <p class="text-justify">Profesional con competencias gerenciales y sólida experiencia en administración, finanzas, atención al cliente y formación de capital humano. Ha desarrollado su labor como asesora e instructora en diversas áreas, destacándose recientemente en el sector agrícola, donde ha capacitado a productores en corridas financieras, rentabilidad de cultivos y análisis de costos.
+
+Además, ha colaborado en el diseño y ejecución de proyectos productivos para microempresas rurales, contribuyendo a fortalecer su sostenibilidad y facilitar su acceso a financiamiento.
+
+Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa para fomentar el crecimiento económico y social en comunidades del sector agropecuario.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio6', this)">
                                                         ↓ Ver más
                                                     </button>
