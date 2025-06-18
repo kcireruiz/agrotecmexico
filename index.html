@@ -2,166 +2,148 @@
 <html lang="en">
 
 <head>
-     <script>
-        (function() {
+    <script>
+        (function () {
             var link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = 'css/bootstrap.min.css';
-        if (window.innerWidth <= 768) {
-            // En móvil: carga diferida
-            link.media = 'print';
-            link.onload = function() { this.media = 'all'; };
-        } else {
-            // En escritorio: carga inmediata
-            link.media = 'all';
-        }
-        document.head.appendChild(link);
+            if (window.innerWidth <= 768) {
+                // En móvil: carga diferida
+                link.media = 'print';
+                link.onload = function () { this.media = 'all'; };
+            } else {
+                // En escritorio: carga inmediata
+                link.media = 'all';
+            }
+            document.head.appendChild(link);
         })();
     </script>
-  <!-- Preload de logo -->
-  <link rel="preload" as="image" href="images/agrologo.webp" type="image/webp">
+    <!-- Preload de logo -->
+    <link rel="preload" as="image" href="images/agrologo.webp" type="image/webp">
 
-  <!-- Metadatos -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <title>Agrotec-Mexico</title>
-  <meta name="keywords" content="sinergia,hijos del campo,campo,america,cursos,cursos agricultura,agrotec america,agrotec,agrotec-Mexico,agrotecnología, agricultura, soluciones agrícolas, tecnología agrícola, México">
-  <meta name="description" content="Somos Agrotec México, expertos en soluciones tecnológicas agrícolas. Conoce nuestros servicios.">
-  <meta name="author" content="Agrotec México">
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Agrotec-Mexico</title>
+    <meta name="keywords"
+        content="sinergia,hijos del campo,campo,america,cursos,cursos agricultura,agrotec america,agrotec,agrotec-Mexico,agrotecnología, agricultura, soluciones agrícolas, tecnología agrícola, México">
+    <meta name="description"
+        content="Somos Agrotec México, expertos en soluciones tecnológicas agrícolas. Conoce nuestros servicios.">
+    <meta name="author" content="Agrotec México">
 
-  <!-- Íconos -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Íconos -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-  <!-- Fonts (optimizadas) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-  </noscript>
+    <!-- Fonts (optimizadas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Paprika&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    </noscript>
 
-  <!-- CSS crítico opcional inline (estilos básicos mínimos, si aplica) -->
-  <!-- <style>body { font-family: 'Roboto', sans-serif; }</style> -->
+    <!-- CSS crítico opcional inline (estilos básicos mínimos, si aplica) -->
+    <!-- <style>body { font-family: 'Roboto', sans-serif; }</style> -->
 
-  <!-- CSS con carga diferida -->
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS con carga diferida -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css" media="print" onload="this.media='all'">-->
-  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/colors/moderate-green.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/colors/moderate-green.css">
-  </noscript>
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/colors/moderate-green.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/colors/moderate-green.css">
+    </noscript>
 
 
 
-  <!-- Soporte IE antiguo (opcional, casi nadie usa IE < 11 hoy) -->
-  <!--[if lt IE 9]>
+    <!-- Soporte IE antiguo (opcional, casi nadie usa IE < 11 hoy) -->
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
 
 <style>
-    #loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #ffffff;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
 
-.status {
-        transform: rotateZ(45deg);
-        perspective: 1000px;
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
-        color: #020308;
-      }
-        .status:before,
-        .status:after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: inherit;
-          height: inherit;
-          border-radius: 50%;
-          transform: rotateX(70deg);
-          animation: 1s spin linear infinite;
-        }
-        .status:after {
-          color: #0fa41c;
-          transform: rotateY(70deg);
-          animation-delay: .4s;
-        }
+  #loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
 
-      @keyframes rotate {
-        0% {
-          transform: translate(-50%, -50%) rotateZ(0deg);
-        }
-        100% {
-          transform: translate(-50%, -50%) rotateZ(360deg);
-        }
-      }
+/* CONTENEDOR para centrar flores + tallo */
+.planta {
+  position: relative;
+  width: 80px;
+  height: 110px; /* Más alto por el tallo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      @keyframes rotateccw {
-        0% {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100% {
-          transform: translate(-50%, -50%) rotate(-360deg);
-        }
-      }
+/* Tallo fijo */
+.tallo {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 50px;
+  background: linear-gradient(to bottom, #5c3b18, #3b2410);
+  border-radius: 3px;
+  z-index: 1;
+}
 
-      @keyframes spin {
-        0%,
-        100% {
-          box-shadow: .2em 0px 0 0px currentcolor;
-        }
-        12% {
-          box-shadow: .2em .2em 0 0 currentcolor;
-        }
-        25% {
-          box-shadow: 0 .2em 0 0px currentcolor;
-        }
-        37% {
-          box-shadow: -.2em .2em 0 0 currentcolor;
-        }
-        50% {
-          box-shadow: -.2em 0 0 0 currentcolor;
-        }
-        62% {
-          box-shadow: -.2em -.2em 0 0 currentcolor;
-        }
-        75% {
-          box-shadow: 0px -.2em 0 0 currentcolor;
-        }
-        87% {
-          box-shadow: .2em -.2em 0 0 currentcolor;
-        }
-      }
-   
+/* Flores giratorias */
+.flores {
+  width: 80px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    radial-gradient(30% 50% at -3px             55%, #38b000 91%, #0000) top    right,
+    radial-gradient(30% 50% at -3px             45%, #38b000 91%, #0000) bottom right,
+    radial-gradient(30% 50% at calc(100% + 3px) 55%, #38b000 91%, #0000) top    left,
+    radial-gradient(30% 50% at calc(100% + 3px) 45%, #38b000 91%, #0000) bottom left,
+    radial-gradient(50% 30% at 45% calc(100% + 3px), #f6d76b 91%, #0000) top    right,
+    radial-gradient(50% 30% at 45% -3px            , #f6d76b 91%, #0000) bottom right,
+    radial-gradient(50% 30% at 55% calc(100% + 3px), #f6d76b 91%, #0000) top    left,
+    radial-gradient(50% 30% at 55% -3px            , #f6d76b 91%, #0000) bottom left;
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: girar 1.5s infinite linear;
+  z-index: 2;
+}
+
+@keyframes girar {
+  100% { transform: rotate(1turn); }
+}
 
     .titulo {
         color: #0fa41c;
         font-size: 1.5em;
         font-family: cursive;
         text-align: center;
+        margin-top: 200px;
     }
 
     .puntos::after {
@@ -292,31 +274,36 @@
             display: inline !important;
             color: #8dc63f;
             font-size: 30px;
-            text-shadow: 
-            -1px -1px 0 black,
-            1px -1px 0 black,
-            -1px  1px 0 black,
-            1px  1px 0 black;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
         }
     }
 
     .svg-curso {
-        position: relative;left: 33%;
+        position: relative;
+        left: 33%;
     }
 
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
         .svg-curso {
-            position: relative;left: 20%;
+            position: relative;
+            left: 20%;
         }
     }
-
 </style>
 
 <body>
     <div id="loader">
-        <div class="status"></div>
-        <div class="titulo">Espere Cargando<span class="puntos"></span></div>
-    </div>
+  <div class="planta">
+    <div class="flores"></div>
+    <div class="tallo"></div>
+     <div class="titulo">Espere Cargando<span class="puntos"></span></div>
+  </div>
+</div>
+
     <div id="site-header">
         <header id="header" class="header-block-top">
             <div class="container">
@@ -340,8 +327,7 @@
 
                                             <!-- Logo para pantallas grandes (PC) -->
                                             <img loading="eager" src="images/agrologo.webp" alt="Logo Agroempresa"
-                                                style="margin-top: -14px;" class="dimension g-logo" 
-                                                decoding="async">
+                                                style="margin-top: -14px;" class="dimension g-logo" decoding="async">
                                         </picture>
                                     </a>
                                 </div>
@@ -403,7 +389,7 @@
     <section id="banner" class="banner-video full-screen-mode parallax">
         <p class="visible-xs">
             <!-- Visible solo en móvil -->
-             <img src="images/banner-02.webp" alt="banner fresas agrotec" class="background-video">
+            <img src="images/banner-02.webp" alt="banner fresas agrotec" class="background-video">
         </p>
 
         <p class="hidden-xs">
@@ -455,15 +441,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    
+
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title"> ¿Quiénes somos? </h2>
                         <h3>Agrotec México</h3>
-                        <p>Es una empresa comprometida con el desarrollo profesional del sector agroalimentario. Nos especializamos en ofrecer cursos y capacitaciones en línea de alta calidad, accesibles desde cualquier lugar, con el objetivo de impulsar el conocimiento técnico y práctico de estudiantes, productores, técnicos y profesionales del campo. Nuestra plataforma está diseñada para brindar una experiencia de aprendizaje flexible, actualizada y enfocada en las necesidades reales del sector agropecuario en México y Latinoamérica.</p>
+                        <p>Es una empresa comprometida con el desarrollo profesional del sector agroalimentario. Nos
+                            especializamos en ofrecer cursos y capacitaciones en línea de alta calidad, accesibles desde
+                            cualquier lugar, con el objetivo de impulsar el conocimiento técnico y práctico de
+                            estudiantes, productores, técnicos y profesionales del campo. Nuestra plataforma está
+                            diseñada para brindar una experiencia de aprendizaje flexible, actualizada y enfocada en las
+                            necesidades reales del sector agropecuario en México y Latinoamérica.</p>
                         <h3>Misión</h3>
-                        <p>Contribuir al fortalecimiento del sector agroalimentario a través de capacitaciones virtuales especializadas, accesibles y de calidad, que promuevan la actualización y el desarrollo profesional continuo de nuestros usuarios.</p>
+                        <p>Contribuir al fortalecimiento del sector agroalimentario a través de capacitaciones virtuales
+                            especializadas, accesibles y de calidad, que promuevan la actualización y el desarrollo
+                            profesional continuo de nuestros usuarios.</p>
                         <h3>Visión</h3>
-                        <p>Ser la plataforma líder en educación agropecuaria en línea en México y Latinoamérica, reconocida por la calidad de nuestros contenidos, la innovación en nuestros métodos de enseñanza y el impacto positivo en el desarrollo del campo.</p>
+                        <p>Ser la plataforma líder en educación agropecuaria en línea en México y Latinoamérica,
+                            reconocida por la calidad de nuestros contenidos, la innovación en nuestros métodos de
+                            enseñanza y el impacto positivo en el desarrollo del campo.</p>
                     </div>
                 </div>
                 <!-- end col -->
@@ -510,8 +505,10 @@
                                             </div>
 
                                             <h5 class="text-center" style="color: black; padding: 5px;">
-                                                <a href="https://www.youtube.com/watch?v=nc9VzhaDOE0" target="_blank">"Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas
-                                                Prácticas"</a>
+                                                <a href="https://www.youtube.com/watch?v=nc9VzhaDOE0"
+                                                    target="_blank">"Introducción al Cultivo de Pitahaya:
+                                                    Recomendaciones y Buenas
+                                                    Prácticas"</a>
                                             </h5>
                                         </div>
                                     </div>
@@ -584,8 +581,10 @@
                                             </div>
 
                                             <h5 class="text-center" style="color: black; padding: 5px;">
-                                                <a href="https://www.youtube.com/watch?v=0cDyFFjpcfo" target="_blank">Inductores de Resistencia en Plantas | Protección Natural contra Plagas
-                                                y Enfermedades</a>
+                                                <a href="https://www.youtube.com/watch?v=0cDyFFjpcfo"
+                                                    target="_blank">Inductores de Resistencia en Plantas | Protección
+                                                    Natural contra Plagas
+                                                    y Enfermedades</a>
                                             </h5>
                                         </div>
                                     </div>
@@ -657,7 +656,9 @@
                                             </div>
 
                                             <h5 class="text-center" style="color: black; padding: 5px;">
-                                                <a href="https://www.youtube.com/watch?v=XhMeErS8Svo" target="_blank">💧 El Futuro del Agua en el Campo: Tratamiento de Aguas Residuales para la Agricultura 🌾</a>
+                                                <a href="https://www.youtube.com/watch?v=XhMeErS8Svo" target="_blank">💧
+                                                    El Futuro del Agua en el Campo: Tratamiento de Aguas Residuales para
+                                                    la Agricultura 🌾</a>
 
                                             </h5>
                                         </div>
@@ -1322,11 +1323,20 @@
                                                     <h4><strong>Ingeniero Agrónomo</strong></h4>
                                                     <p class="text-justify">Especialista en Fitotecnia.
 
-Su trayectoria en el sector agrícola comenzó en 2010 como Técnico Agrícola, desempeñándose en el manejo y producción de cultivos como mango, tamarindo, limón, naranja, piña, caña de azúcar y agave (Tequilana Weber Azul y Agave Salmiana), lo que le brindó una sólida base práctica en diferentes sistemas productivos.
+                                                        Su trayectoria en el sector agrícola comenzó en 2010 como
+                                                        Técnico Agrícola, desempeñándose en el manejo y producción de
+                                                        cultivos como mango, tamarindo, limón, naranja, piña, caña de
+                                                        azúcar y agave (Tequilana Weber Azul y Agave Salmiana), lo que
+                                                        le brindó una sólida base práctica en diferentes sistemas
+                                                        productivos.
 
-En los últimos años ha consolidado su experiencia profesional en el sector de berries, colaborando activamente en proyectos relacionados con zarzamora, arándano, frambuesa y fresa.
+                                                        En los últimos años ha consolidado su experiencia profesional en
+                                                        el sector de berries, colaborando activamente en proyectos
+                                                        relacionados con zarzamora, arándano, frambuesa y fresa.
 
-Luis destaca por su pasión por la fitosanidad, con especial interés en las áreas de entomología y microbiología, elementos clave para el desarrollo sostenible y eficiente de los cultivos.
+                                                        Luis destaca por su pasión por la fitosanidad, con especial
+                                                        interés en las áreas de entomología y microbiología, elementos
+                                                        clave para el desarrollo sostenible y eficiente de los cultivos.
                                                     </p>
                                                     <button class="read-more-btn" onclick="toggleText('bio1', this)">
                                                         ↓ Ver más
@@ -1341,20 +1351,32 @@ Luis destaca por su pasión por la fitosanidad, con especial interés en las ár
                                     <div class="panel-body">
                                         <div class="media">
                                             <div class="sf-team">
-                                                 <h4 class="text-center"><strong>Abigail Andrade Hernández</strong></h4>
+                                                <h4 class="text-center"><strong>Abigail Andrade Hernández</strong></h4>
                                                 <div class="thumb">
                                                     <a href="#"><img loading="lazy" src="images/ponente2.webp"
                                                             height="300px" alt="" style="padding: 8px 8px;"></a>
                                                 </div>
                                                 <div class="text-col" id="bio2">
                                                     <h4><strong>Ingeniera Agrónoma Fitotecnista</strong></h4>
-                                                    <p class="text-justify">Especialista en recopilación y análisis de datos productivos, evaluación de variables agrícolas, y desarrollo de programas estratégicos en trazabilidad, cadena de suministro, calidad e inocuidad.
+                                                    <p class="text-justify">Especialista en recopilación y análisis de
+                                                        datos productivos, evaluación de variables agrícolas, y
+                                                        desarrollo de programas estratégicos en trazabilidad, cadena de
+                                                        suministro, calidad e inocuidad.
 
-Su experiencia aporta valor en la implementación de procesos integrales desde la planificación hasta la cosecha, optimizando la eficiencia productiva y garantizando altos estándares de calidad.
+                                                        Su experiencia aporta valor en la implementación de procesos
+                                                        integrales desde la planificación hasta la cosecha, optimizando
+                                                        la eficiencia productiva y garantizando altos estándares de
+                                                        calidad.
 
-Cuenta con manejo avanzado de herramientas geoespaciales, software estadístico (Minitab, InfoStat), Power BI (básico) y Excel avanzado con desarrollo de macros, respaldado con certificación DC3.
+                                                        Cuenta con manejo avanzado de herramientas geoespaciales,
+                                                        software estadístico (Minitab, InfoStat), Power BI (básico) y
+                                                        Excel avanzado con desarrollo de macros, respaldado con
+                                                        certificación DC3.
 
-Con un nivel de inglés B2 y sólida experiencia en el trabajo bajo esquemas de certificación internacional en fitosanidad, nutrición y responsabilidad social, participa activamente en proyectos orientados a cultivos orgánicos y convencionales.</p>
+                                                        Con un nivel de inglés B2 y sólida experiencia en el trabajo
+                                                        bajo esquemas de certificación internacional en fitosanidad,
+                                                        nutrición y responsabilidad social, participa activamente en
+                                                        proyectos orientados a cultivos orgánicos y convencionales.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio2', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1375,9 +1397,19 @@ Con un nivel de inglés B2 y sólida experiencia en el trabajo bajo esquemas de 
                                                 </div>
                                                 <div class="text-col" id="bio3">
                                                     <h4><strong>Ingeniera Agrónoma</strong></h4>
-                                                    <p class="text-justify">Especialista en Producción Sustentable. Cuenta con sólida experiencia en asesoría técnica, desarrollo de estrategias de manejo agrícola y vinculación comercial en el sector. Ha trabajado en el manejo de cultivos intensivos como jitomate, cebolla, maíz, brócoli, lechuga, nopal y pitahaya, contribuyendo a optimizar procesos productivos y mejorar rendimientos.
+                                                    <p class="text-justify">Especialista en Producción Sustentable.
+                                                        Cuenta con sólida experiencia en asesoría técnica, desarrollo de
+                                                        estrategias de manejo agrícola y vinculación comercial en el
+                                                        sector. Ha trabajado en el manejo de cultivos intensivos como
+                                                        jitomate, cebolla, maíz, brócoli, lechuga, nopal y pitahaya,
+                                                        contribuyendo a optimizar procesos productivos y mejorar
+                                                        rendimientos.
 
-Su trayectoria incluye participación en proyectos agrícolas en diversas zonas del Bajío y el Altiplano Central, donde ha destacado por su conocimiento en el manejo responsable de plaguicidas, calibración de equipos de aplicación y la implementación de Buenas Prácticas Agrícolas (BPA).</p>
+                                                        Su trayectoria incluye participación en proyectos agrícolas en
+                                                        diversas zonas del Bajío y el Altiplano Central, donde ha
+                                                        destacado por su conocimiento en el manejo responsable de
+                                                        plaguicidas, calibración de equipos de aplicación y la
+                                                        implementación de Buenas Prácticas Agrícolas (BPA).</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio3', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1398,9 +1430,21 @@ Su trayectoria incluye participación en proyectos agrícolas en diversas zonas 
                                                 </div>
                                                 <div class="text-col" id="bio4">
                                                     <h4><strong>Ingeniero Agrónomo </strong></h4>
-                                                    <p class="text-justify">Especialista en Parasitología Agrícola. Aporta más de 15 años de experiencia en el sector agropecuario, desempeñándose en roles clave de asesoría técnica, manejo de cultivos, control fitosanitario y dirección comercial en empresas de alto prestigio como Agrícola El Morón, Agroservicios Nieto y Grupo Plantagro.
+                                                    <p class="text-justify">Especialista en Parasitología Agrícola.
+                                                        Aporta más de 15 años de experiencia en el sector agropecuario,
+                                                        desempeñándose en roles clave de asesoría técnica, manejo de
+                                                        cultivos, control fitosanitario y dirección comercial en
+                                                        empresas de alto prestigio como Agrícola El Morón, Agroservicios
+                                                        Nieto y Grupo Plantagro.
 
-Su trayectoria profesional se ha centrado en la asesoría técnica de cultivos como papa, chile, tomate, maíz y trigo, destacándose por su habilidad para potenciar la participación de mercado y fortalecer relaciones estratégicas con productores y empresas del sector agrícola. Entre sus principales logros figura el aumento significativo en la captación de clientes y un crecimiento de hasta un 65% en ventas durante su gestión en cargos gerenciales.</p>
+                                                        Su trayectoria profesional se ha centrado en la asesoría técnica
+                                                        de cultivos como papa, chile, tomate, maíz y trigo, destacándose
+                                                        por su habilidad para potenciar la participación de mercado y
+                                                        fortalecer relaciones estratégicas con productores y empresas
+                                                        del sector agrícola. Entre sus principales logros figura el
+                                                        aumento significativo en la captación de clientes y un
+                                                        crecimiento de hasta un 65% en ventas durante su gestión en
+                                                        cargos gerenciales.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio4', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1421,11 +1465,21 @@ Su trayectoria profesional se ha centrado en la asesoría técnica de cultivos c
                                                 </div>
                                                 <div class="text-col" id="bio5">
                                                     <h4><strong>Ingeniero agrónomo zootecnista</strong></h4>
-                                                    <p class="text-justify">Con amplia experiencia en el manejo y producción de diversos cultivos como maíz, café, rambutan, mango, papaya, plátano, banano y pastizales, así como en la producción animal de bovinos, leche, aves, borregos y abejas.
+                                                    <p class="text-justify">Con amplia experiencia en el manejo y
+                                                        producción de diversos cultivos como maíz, café, rambutan,
+                                                        mango, papaya, plátano, banano y pastizales, así como en la
+                                                        producción animal de bovinos, leche, aves, borregos y abejas.
 
-Ha participado activamente en programas gubernamentales, incluyendo simposios de sistemas silvopastoriles, aportando conocimientos técnicos y prácticos para el desarrollo sostenible del sector agropecuario.
+                                                        Ha participado activamente en programas gubernamentales,
+                                                        incluyendo simposios de sistemas silvopastoriles, aportando
+                                                        conocimientos técnicos y prácticos para el desarrollo sostenible
+                                                        del sector agropecuario.
 
-Actualmente se desempeña como ponente y asesor, compartiendo su experiencia tanto en modalidad presencial como en línea, con productores de distintas regiones de la República Mexicana, contribuyendo a la mejora continua y la profesionalización del campo.</p>
+                                                        Actualmente se desempeña como ponente y asesor, compartiendo su
+                                                        experiencia tanto en modalidad presencial como en línea, con
+                                                        productores de distintas regiones de la República Mexicana,
+                                                        contribuyendo a la mejora continua y la profesionalización del
+                                                        campo.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio5', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1446,11 +1500,22 @@ Actualmente se desempeña como ponente y asesor, compartiendo su experiencia tan
                                                 </div>
                                                 <div class="text-col" id="bio6">
                                                     <h4><strong>Lic. en Recursos Humanos</strong></h4>
-                                                    <p class="text-justify">Profesional con competencias gerenciales y sólida experiencia en administración, finanzas, atención al cliente y formación de capital humano. Ha desarrollado su labor como asesora e instructora en diversas áreas, destacándose recientemente en el sector agrícola, donde ha capacitado a productores en corridas financieras, rentabilidad de cultivos y análisis de costos.
+                                                    <p class="text-justify">Profesional con competencias gerenciales y
+                                                        sólida experiencia en administración, finanzas, atención al
+                                                        cliente y formación de capital humano. Ha desarrollado su labor
+                                                        como asesora e instructora en diversas áreas, destacándose
+                                                        recientemente en el sector agrícola, donde ha capacitado a
+                                                        productores en corridas financieras, rentabilidad de cultivos y
+                                                        análisis de costos.
 
-Además, ha colaborado en el diseño y ejecución de proyectos productivos para microempresas rurales, contribuyendo a fortalecer su sostenibilidad y facilitar su acceso a financiamiento.
+                                                        Además, ha colaborado en el diseño y ejecución de proyectos
+                                                        productivos para microempresas rurales, contribuyendo a
+                                                        fortalecer su sostenibilidad y facilitar su acceso a
+                                                        financiamiento.
 
-Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa para fomentar el crecimiento económico y social en comunidades del sector agropecuario.</p>
+                                                        Se distingue por su empatía, compromiso y entusiasmo, cualidades
+                                                        que impulsa para fomentar el crecimiento económico y social en
+                                                        comunidades del sector agropecuario.</p>
                                                     <button class="read-more-btn" onclick="toggleText('bio6', this)">
                                                         ↓ Ver más
                                                     </button>
@@ -1583,7 +1648,8 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                         <div class="box">
                                             <a href="#" data-toggle="modal" data-target="#1">
                                                 <video data-src="video.mp4" preload="none" width="100%" autoplay muted
-                                                    loop playsinline poster="images/banner-generico.webp" height="600px">
+                                                    loop playsinline poster="images/banner-generico.webp"
+                                                    height="600px">
                                                     <source src="images/DISEnODESOLUCIONESNUTRITIVAS.mp4"
                                                         type="video/mp4">
                                                     Tu navegador no soporta video HTML5.
@@ -1601,7 +1667,8 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                         <div class="box">
                                             <a href="#" data-toggle="modal" data-target="#1">
                                                 <video data-src="video.mp4" preload="none" width="100%" autoplay muted
-                                                    loop playsinline poster="images/banner-generico.webp" height="600px">
+                                                    loop playsinline poster="images/banner-generico.webp"
+                                                    height="600px">
                                                     <source src="images/FERTIRRIEGO.mp4" type="video/mp4">
                                                     Tu navegador no soporta video HTML5.
                                                 </video>
@@ -1618,7 +1685,8 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                         <div class="box">
                                             <a href="#" data-toggle="modal" data-target="#1">
                                                 <video data-src="video.mp4" preload="none" width="100%" autoplay muted
-                                                    loop playsinline poster="images/banner-generico.webp" height="600px">
+                                                    loop playsinline poster="images/banner-generico.webp"
+                                                    height="600px">
                                                     <source src="images/Viveros Forestales.mp4" type="video/mp4">
                                                     Tu navegador no soporta video HTML5.
                                                 </video>
@@ -1635,7 +1703,8 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                         <div class="box">
                                             <a href="#" data-toggle="modal" data-target="#1">
                                                 <video data-src="video.mp4" preload="none" width="100%" autoplay muted
-                                                    loop playsinline poster="images/banner-generico.webp" height="600px">
+                                                    loop playsinline poster="images/banner-generico.webp"
+                                                    height="600px">
                                                     <source src="images/Derivados de Nopal .mp4" type="video/mp4">
                                                     Tu navegador no soporta video HTML5.
                                                 </video>
@@ -1652,7 +1721,8 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                         <div class="box">
                                             <a href="#" data-toggle="modal" data-target="#1">
                                                 <video data-src="video.mp4" preload="none" width="100%" autoplay muted
-                                                    loop playsinline poster="images/banner-generico.webp" height="600px">
+                                                    loop playsinline poster="images/banner-generico.webp"
+                                                    height="600px">
                                                     <source src="images/Derivados de Nopal .mp4" type="video/mp4">
                                                     Tu navegador no soporta video HTML5.
                                                 </video>
@@ -1669,7 +1739,8 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                                         <div class="box">
                                             <a href="#" data-toggle="modal" data-target="#1">
                                                 <video data-src="video.mp4" preload="none" width="100%" autoplay muted
-                                                    loop playsinline poster="images/banner-generico.webp" height="600px">
+                                                    loop playsinline poster="images/banner-generico.webp"
+                                                    height="600px">
                                                     <source src="images/Derivados de Nopal .mp4" type="video/mp4">
                                                     Tu navegador no soporta video HTML5.
                                                 </video>
@@ -1703,14 +1774,15 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-block" style="padding: 10px;">
                                     <!-- FACHADA PERSONALIZADA DE VIDEO -->
-                                    <div class="youtube-placeholder" data-id="nc9VzhaDOE0"
-                                        style="margin-bottom: 10px;">
+                                    <div class="youtube-placeholder" data-id="nc9VzhaDOE0" style="margin-bottom: 10px;">
                                         <div class="play-button"></div>
                                     </div>
 
                                     <h5 class="text-center" style="color: black; padding: 5px;">
-                                        <a href="https://www.youtube.com/embed/nc9VzhaDOE0" target="_blank">"Introducción al Cultivo de Pitahaya: Recomendaciones y Buenas
-                                        Prácticas"</a>
+                                        <a href="https://www.youtube.com/embed/nc9VzhaDOE0"
+                                            target="_blank">"Introducción al Cultivo de Pitahaya: Recomendaciones y
+                                            Buenas
+                                            Prácticas"</a>
                                     </h5>
                                 </div>
                             </div>
@@ -1720,13 +1792,13 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-block" style="padding: 10px;">
                                     <!-- FACHADA PERSONALIZADA DE VIDEO -->
-                                    <div class="youtube-placeholder" data-id="0cDyFFjpcfo"
-                                        style="margin-bottom: 10px;">
+                                    <div class="youtube-placeholder" data-id="0cDyFFjpcfo" style="margin-bottom: 10px;">
                                         <div class="play-button"></div>
                                     </div>
                                     <h5 class="text-center" style="color: black; padding: 5px;">
-                                        <a href="https://www.youtube.com/embed/0cDyFFjpcfo" target="_blank">🎥 Inductores de Resistencia en Plantas |
-                                        Protección Natural contra Plagas y Enfermedades 🌿🛡️</a>
+                                        <a href="https://www.youtube.com/embed/0cDyFFjpcfo" target="_blank">🎥
+                                            Inductores de Resistencia en Plantas |
+                                            Protección Natural contra Plagas y Enfermedades 🌿🛡️</a>
                                     </h5>
                                 </div>
                             </div>
@@ -2160,13 +2232,13 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
             }
         }
     </style>
-        <a href="https://wa.me/525532376454?text=Hola%2C%20quiero%20más%20información" target="_blank">
-             <img src="images/agrotec_transparent.gif" alt="gif decorativo" class="gif-fijo" width="100" height="100">
-        </a>
+    <a href="https://wa.me/525532376454?text=Hola%2C%20quiero%20más%20información" target="_blank">
+        <img src="images/agrotec_transparent.gif" alt="gif decorativo" class="gif-fijo" width="100" height="100">
+    </a>
     <a href="#" class="scrollup" style="display: none;">Scroll</a>
 
-            <!-- Colors -->
-   <!-- <section id="color-panel" class="close-color-panel">
+    <!-- Colors -->
+    <!-- <section id="color-panel" class="close-color-panel">
         <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
 
         <div class="segment">
@@ -2184,102 +2256,102 @@ Se distingue por su empatía, compromiso y entusiasmo, cualidades que impulsa pa
     <script src="js/bootstrap.min.js" defer></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js" defer></script>
-      <!-- jQuery con defer -->
+    <!-- jQuery con defer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-    /*[document.addEventListener("DOMContentLoaded", function () {
-        const loader = document.getElementById("loader");
-        if (loader) {
-            loader.style.display = "none";
-        }
-    });*/
-
-    $(document).ready(function () {
-        var counted = false;
-        $(window).scroll(function () {
-            var oTop = $('.counter').first().offset().top - window.innerHeight;
-            if (!counted && $(window).scrollTop() > oTop) {
-                $('.counter').each(function () {
-                    var $this = $(this);
-                    $({ countNum: $this.text() }).animate({
-                        countNum: $this.data('count')
-                    }, {
-                        duration: 2000,
-                        easing: 'swing',
-                        step: function () {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $this.text(this.countNum);
-                        }
-                    });
-                });
-                counted = true;
+        /*[document.addEventListener("DOMContentLoaded", function () {
+            const loader = document.getElementById("loader");
+            if (loader) {
+                loader.style.display = "none";
             }
-        });
-    });
+        });*/
 
-    function toggleText(id, btn) {
-        const container = document.getElementById(id);
-        container.classList.toggle('expanded');
-        btn.textContent = container.classList.contains('expanded') ? '↑ Ver menos' : '↓ Ver más';
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const placeholders = document.querySelectorAll(".youtube-placeholder");
-
-        placeholders.forEach(el => {
-            const videoId = el.dataset.id;
-            el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
-
-            el.addEventListener("click", () => {
-                const iframe = document.createElement("iframe");
-                iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
-                iframe.setAttribute("frameborder", "0");
-                iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-                iframe.setAttribute("allowfullscreen", "");
-                iframe.setAttribute("loading", "lazy");
-                iframe.style.width = "100%";
-                iframe.style.height = "100%";
-                el.innerHTML = "";
-                el.appendChild(iframe);
+        $(document).ready(function () {
+            var counted = false;
+            $(window).scroll(function () {
+                var oTop = $('.counter').first().offset().top - window.innerHeight;
+                if (!counted && $(window).scrollTop() > oTop) {
+                    $('.counter').each(function () {
+                        var $this = $(this);
+                        $({ countNum: $this.text() }).animate({
+                            countNum: $this.data('count')
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    });
+                    counted = true;
+                }
             });
         });
-    });
 
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 50) {
-            $('.header-block-top').addClass('fixed-menu');
-            $('.nav').removeClass('transparente');
-            $('.logo').removeClass('logo-envuelto');
-            $('.dimension').addClass('c-logo');
-            $('.dimension').removeClass('g-logo');
-        } else {
-            $('.header-block-top').removeClass('fixed-menu');
-            $('.nav').addClass('transparente');
-            $('.logo').addClass('logo-envuelto');
-            $('.dimension').addClass('g-logo');
-            $('.dimension').removeClass('c-logo');
+        function toggleText(id, btn) {
+            const container = document.getElementById(id);
+            container.classList.toggle('expanded');
+            btn.textContent = container.classList.contains('expanded') ? '↑ Ver menos' : '↓ Ver más';
         }
-    });
 
-    const video = document.querySelector("video");
+        document.addEventListener("DOMContentLoaded", function () {
+            const placeholders = document.querySelectorAll(".youtube-placeholder");
 
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const src = video.getAttribute("data-src");
-                if (src) {
-                    video.src = src;
-                    video.load();
-                }
-                obs.unobserve(video);
+            placeholders.forEach(el => {
+                const videoId = el.dataset.id;
+                el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+
+                el.addEventListener("click", () => {
+                    const iframe = document.createElement("iframe");
+                    iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+                    iframe.setAttribute("frameborder", "0");
+                    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                    iframe.setAttribute("allowfullscreen", "");
+                    iframe.setAttribute("loading", "lazy");
+                    iframe.style.width = "100%";
+                    iframe.style.height = "100%";
+                    el.innerHTML = "";
+                    el.appendChild(iframe);
+                });
+            });
+        });
+
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() > 50) {
+                $('.header-block-top').addClass('fixed-menu');
+                $('.nav').removeClass('transparente');
+                $('.logo').removeClass('logo-envuelto');
+                $('.dimension').addClass('c-logo');
+                $('.dimension').removeClass('g-logo');
+            } else {
+                $('.header-block-top').removeClass('fixed-menu');
+                $('.nav').addClass('transparente');
+                $('.logo').addClass('logo-envuelto');
+                $('.dimension').addClass('g-logo');
+                $('.dimension').removeClass('c-logo');
             }
         });
-    });
 
-    observer.observe(video);
-</script>
+        const video = document.querySelector("video");
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const src = video.getAttribute("data-src");
+                    if (src) {
+                        video.src = src;
+                        video.load();
+                    }
+                    obs.unobserve(video);
+                }
+            });
+        });
+
+        observer.observe(video);
+    </script>
 </body>
 
 </html>
